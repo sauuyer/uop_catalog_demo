@@ -1,0 +1,48 @@
+[
+  {
+    "id": "uop_mooring_temp_2024",
+    "title": "Upper Ocean Mooring Temperature Time Series (2024)",
+    "summary": "Near-surface temperature observations from a moored instrument array. Quality-controlled hourly data.",
+    "keywords": ["temperature", "mooring", "upper ocean", "time series"],
+    "variables": ["sea_water_temperature"],
+    "platform": "Mooring",
+    "region": "North Atlantic",
+    "time_start": "2024-01-01",
+    "time_end": "2024-12-31",
+    "doi": "",
+    "links": [
+      { "label": "Landing page", "url": "/datasets/uop_mooring_temp_2024.html" },
+      { "label": "ERDDAP", "url": "https://example.org/erddap/tabledap/uop_mooring_temp_2024.html" }
+    ]
+  },
+  {
+    "id": "uop_glider_ctd_2023",
+    "title": "Glider CTD Profiles (2023)",
+    "summary": "CTD profile data collected by autonomous gliders. Includes temperature, salinity, and pressure.",
+    "keywords": ["glider", "ctd", "profiles", "salinity", "temperature"],
+    "variables": ["sea_water_temperature", "sea_water_salinity", "sea_water_pressure"],
+    "platform": "Glider",
+    "region": "Sargasso Sea",
+    "time_start": "2023-05-10",
+    "time_end": "2023-09-14",
+    "doi": "10.1234/example.doi",
+    "links": [
+      { "label": "Landing page", "url": "/datasets/uop_glider_ctd_2023.html" }
+    ]
+  },
+  {
+    "id": "uop_met_station_2022",
+    "title": "Meteorological Station Observations (2022)",
+    "summary": "Wind speed/direction, air temperature, relative humidity, and pressure from a surface met station.",
+    "keywords": ["meteorology", "winds", "humidity", "air temperature"],
+    "variables": ["wind_speed", "wind_from_direction", "air_temperature", "relative_humidity", "air_pressure"],
+    "platform": "Surface station",
+    "region": "Coastal",
+    "time_start": "2022-01-01",
+    "time_end": "2022-12-31",
+    "doi": "",
+    "links": [
+      { "label": "Landing page", "url": "/datasets/uop_met_station_2022.html" }
+    ]
+  }
+]

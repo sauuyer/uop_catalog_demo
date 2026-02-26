@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Data Catalog (Fuse.js)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 32px; max-width: 980px; }
+    h1 { margin: 0 0 8px; }
+    .sub { color: #555; margin: 0 0 24px; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    input[type="search"] { flex: 1; min-width: 280px; padding: 10px 12px; font-size: 16px; }
+    select { padding: 10px 12px; font-size: 16px; }
+    .meta { margin: 14px 0 10px; color: #666; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+    .title { font-weight: 650; font-size: 18px; margin: 0 0 6px; }
+    .small { color: #666; font-size: 14px; margin: 0 0 8px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .tag { font-size: 12px; border: 1px solid #eee; padding: 4px 8px; border-radius: 999px; background: #fafafa; }
+    .links a { margin-right: 12px; }
+    .muted { color: #777; }
+  </style>
+</head>
+<body>
+  <h1>Demo Data Catalog</h1>
+  <p class="sub">Client-side fuzzy search over <code>datasets.json</code> using Fuse.js.</p>
+
+  <div class="row">
+    <input id="q" type="search" placeholder="Search: temperature, glider CTD, humidity, North Atlantic…" autocomplete="off" />
+    <select id="platform">
+      <option value="">All platforms</option>
+    </select>
+  </div>
+
+  <div class="meta">
+    <span id="status" class="muted">Loading…</span>
+  </div>
+
+  <div id="results"></div>
+
+  <!-- Fuse.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+  <script>
+    let datasets = [];
+    let fuse = null;
+
+    const elQ = document.getElementById('q');
+    const elPlatform = document.getElementById('platform');
+    const elStatus = document.getElementById('status');
+    const elResults = document.getElementById('results');
+
+    function escapeHtml(s) {
+      return (s ?? '').toString().replace(/[&<>"']/g, c => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[c]));
+    }
+
+    function render(list, note) {
+      elStatus.textContent = note;
+
+      elResults.innerHTML = list.map(d => {
+        const time = [d.time_start, d.time_end].filter(Boolean).join(" → ");
+        const links = (d.links || []).map(l =>
+          `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
+        ).join("");
+
+        const tags = []
+          .concat(d.platform ? [`Platform: ${d.platform}`] : [])
+          .concat(d.region ? [`Region: ${d.region}`] : [])
+          .concat((d.variables || []).slice(0, 4).map(v => `Var: ${v}`))
+          .concat((d.keywords || []).slice(0, 4).map(k => k));
+
+        return `
+          <div class="card">
+            <div class="title">${escapeHtml(d.title)}</div>
+            <div class="small">${escapeHtml(d.summary)}</div>
+            <div class="small"><strong>Time:</strong> ${escapeHtml(time || '—')} ${d.doi ? ` · <strong>DOI:</strong> ${escapeHtml(d.doi)}` : ''}</div>
+            <div class="links">${links}</div>
+            <div class="tags">${tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
+          </div>
+        `;
+      }).join("");
+
+      if (!list.length) {
+        elResults.innerHTML = `<p class="muted">No matches. Try a different query (e.g., “salinity”, “met station”, “North Atlantic”).</p>`;
+      }
+    }
+
+    function getFilteredBase() {
+      const p = elPlatform.value;
+      return p ? datasets.filter(d => (d.platform || '').toLowerCase() === p.toLowerCase()) : datasets;
+    }
+
+    function doSearch() {
+      const q = elQ.value.trim();
+      const base = getFilteredBase();
+
+      if (!q) {
+        render(base, `Showing ${base.length} dataset(s).`);
+        return;
+      }
+
+      // Fuse searches over full datasets list, so we search and then filter by platform
+      const results = fuse.search(q).map(r => r.item);
+      const filtered = elPlatform.value
+        ? results.filter(d => (d.platform || '').toLowerCase() === elPlatform.value.toLowerCase())
+        : results;
+
+      render(filtered, `Found ${filtered.length} match(es) for “${q}”.`);
+    }
+
+    async function init() {
+      const res = await fetch('./datasets.json');
+      datasets = await res.json();
+
+      // Populate platform dropdown
+      const platforms = Array.from(new Set(datasets.map(d => d.platform).filter(Boolean))).sort();
+      platforms.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.textContent = p;
+        elPlatform.appendChild(opt);
+      });
+
+      // Fuse config: weight important fields
+      fuse = new Fuse(datasets, {
+        includeScore: true,
+        threshold: 0.35,           // lower = stricter, higher = fuzzier
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+        keys: [
+          { name: "title", weight: 0.45 },
+          { name: "keywords", weight: 0.20 },
+          { name: "variables", weight: 0.18 },
+          { name: "summary", weight: 0.12 },
+          { name: "platform", weight: 0.03 },
+          { name: "region", weight: 0.02 }
+        ]
+      });
+
+      // Wire events
+      elQ.addEventListener('input', doSearch);
+      elPlatform.addEventListener('change', doSearch);
+
+      render(datasets, `Showing ${datasets.length} dataset(s).`);
+      elStatus.textContent = `Loaded ${datasets.length} dataset(s). Type to search.`;
+    }
+
+    init().catch(err => {
+      console.error(err);
+      elStatus.textContent = "Failed to load datasets.json (check the server is running).";
+    });
+  </script>
+</body>
+</html>
