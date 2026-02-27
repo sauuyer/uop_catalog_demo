@@ -131,7 +131,7 @@ if (start && end) {
   
     async function init() {
       // Use absolute path to avoid relative-path surprises
-      const res = await fetch(`/datasets.json?v=${Date.now()}`); // cache-buster while developing
+      const res = await fetch(`./datasets.json?v=${Date.now()}`); // cache-buster while developing
       const data = await res.json();
   
       // Flatten projects->datasets into a single array
