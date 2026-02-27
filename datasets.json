@@ -1,48 +1,589 @@
-[
-  {
-    "id": "uop_mooring_temp_2024",
-    "title": "Upper Ocean Mooring Temperature Time Series (2024)",
-    "summary": "Near-surface temperature observations from a moored instrument array. Quality-controlled hourly data.",
-    "keywords": ["temperature", "mooring", "upper ocean", "time series"],
-    "variables": ["sea_water_temperature"],
-    "platform": "Mooring",
-    "region": "North Atlantic",
-    "time_start": "2024-01-01",
-    "time_end": "2024-12-31",
-    "doi": "",
-    "links": [
-      { "label": "Landing page", "url": "/datasets/uop_mooring_temp_2024.html" },
-      { "label": "ERDDAP", "url": "https://example.org/erddap/tabledap/uop_mooring_temp_2024.html" }
-    ]
+{
+  "catalog": {
+    "id": "uop_catalog_demo",
+    "title": "Upper Ocean Processes (UOP) Demo Data Catalog",
+    "description": "Demo catalog organized by project, with datasets grouped under each project. Projects are either ongoing or archived.",
+    "generated_utc": "2026-02-27T00:00:00Z",
+    "schema_version": "1.0.0"
   },
-  {
-    "id": "uop_glider_ctd_2023",
-    "title": "Glider CTD Profiles (2023)",
-    "summary": "CTD profile data collected by autonomous gliders. Includes temperature, salinity, and pressure.",
-    "keywords": ["glider", "ctd", "profiles", "salinity", "temperature"],
-    "variables": ["sea_water_temperature", "sea_water_salinity", "sea_water_pressure"],
-    "platform": "Glider",
-    "region": "Sargasso Sea",
-    "time_start": "2023-05-10",
-    "time_end": "2023-09-14",
-    "doi": "10.1234/example.doi",
-    "links": [
-      { "label": "Landing page", "url": "/datasets/uop_glider_ctd_2023.html" }
-    ]
-  },
-  {
-    "id": "uop_met_station_2022",
-    "title": "Meteorological Station Observations (2022)",
-    "summary": "Wind speed/direction, air temperature, relative humidity, and pressure from a surface met station.",
-    "keywords": ["meteorology", "winds", "humidity", "air temperature"],
-    "variables": ["wind_speed", "wind_from_direction", "air_temperature", "relative_humidity", "air_pressure"],
-    "platform": "Surface station",
-    "region": "Coastal",
-    "time_start": "2022-01-01",
-    "time_end": "2022-12-31",
-    "doi": "",
-    "links": [
-      { "label": "Landing page", "url": "/datasets/uop_met_station_2022.html" }
-    ]
-  }
-]
+  "projects": [
+    {
+      "id": "uop_project_safari",
+      "acronym": "SAFARI",
+      "title": "SAFARI (UOP Project)",
+      "status": "ongoing",
+      "summary": "The ONR SAFARI Departmental Research Initiative aims to improve our understanding of how air/sea interactions impact the timing, intensity, and impacts of atmospheric river events in the eastern Pacific Ocean. A joint Scripps Oceanographic and Woods Hole Oceanographic partnership has developed a capacity to observe surface fluxes and ocean boundary layer response through previous ONR support. The system combines an air/sea flux buoy (WHOI) with a Wirewalker ocean-wave-powered profiling vehicle (SIO). For SAFARI, in consultation with the SAFARI DRI science team, a mooring location in the central mid-latitude Pacific (33°25' / 158° W) was chosen to provide information for numerical models, and to investigate basic questions regarding the influence of air/sea fluxes on atmospheric processes in the critical upstream region.",
+      "region": "Central mid-latitude Pacific Ocean",
+      "location": {
+        "description": "Mooring location: central mid-latitude Pacific (33°25' / 158° W",
+        "latitude": 33.44223,
+        "longitude": -158.03632
+      },
+      "time_start": "2025-11-21",
+      "time_end": null,
+      "keywords": ["upper ocean", "air-sea fluxes", "mooring", "meteorology", "oceanography"],
+      "links": [
+        {
+          "label": "Project page (UOP)",
+          "url": "https://uop.whoi.edu/currentprojects/SAFARI/SAFARI.html"
+        },
+        {
+          "label": "Current Projects index",
+          "url": "https://uop.whoi.edu/currentprojects/currentprojects.html"
+        }
+      ],
+      "datasets": [
+        {
+          "id": "safari_all_products",
+          "title": "Real-time: SAFARI Data Products",
+          "status": "active",
+          "summary": "Integrated observing system supporting the ONR SAFARI DRI to study how air–sea interactions influence atmospheric river timing, intensity, and impacts. The system combines a WHOI air/sea flux buoy with an SIO Wirewalker profiler to capture surface forcing, upper-ocean boundary layer response, and derived air–sea flux products. This catalog record is an umbrella entry; use the SAFARI data landing page to select specific products and formats.",
+          "keywords": [
+            "SAFARI",
+            "ONR DRI",
+            "atmospheric rivers",
+            "air-sea interaction",
+            "surface flux buoy",
+            "Wirewalker",
+            "ocean boundary layer",
+            "meteorology",
+            "ASIMet",
+            "Campbell logger",
+            "GPS",
+            "COARE",
+            "air-sea fluxes",
+            "real-time",
+            "ASCII",
+            "JSON",
+            "Matlab",
+            "NetCDF",
+            "daily plots"
+          ],
+          "platform": "Surface mooring + wave-powered profiler (Wirewalker)",
+          "region": "Central mid-latitude Pacific Ocean",
+          "time_start": "2025-11-21",
+          "time_end": "Ongoing",
+          "doi": "",
+          "granularity": {
+            "temporal_resolution": "Varies by product (typically hourly averages for buoy meteorology; profile/binned for Wirewalker)",
+            "aggregation": "Varies by product",
+            "time_definition": "See each product’s file headers/metadata on the landing page for timestamp conventions."
+          },
+          "sampling_frequency": {
+            "notes": "Telemetry cadence and processing vary by subsystem (Campbell vs ASIMet vs profiler vs derived products). Use product-specific documentation/headers for precise cadence."
+          },
+          "data_scope": {
+            "overview": "Umbrella record covering multiple data product families from the SAFARI observing system.",
+            "product_families": [
+              {
+                "name": "Campbell system (buoy logger)",
+                "what_it_is": "Platform data logger outputs and related buoy data products.",
+                "formats": ["JSON", "ASCII", "Matlab"]
+              },
+              {
+                "name": "ASIMet system (meteorology)",
+                "what_it_is": "WHOI ASIMet meteorological sensor package data.",
+                "formats": ["JSON", "ASCII"],
+                "provides_record_of": [
+                  "Wind velocity",
+                  "Relative humidity",
+                  "Air temperature",
+                  "Sea surface temperature",
+                  "Incoming shortwave radiation",
+                  "Incoming longwave radiation",
+                  "Barometric pressure",
+                  "Precipitation"
+                ],
+                "instrument_package_info": "/UOPinstruments/UOPinstruments.html"
+              },
+              {
+                "name": "GPS",
+                "what_it_is": "Buoy position/time reference products.",
+                "formats": ["Rover", "Kilo"]
+              },
+              {
+                "name": "Wirewalker",
+                "what_it_is": "Wave-powered profiler measurements and binned upper-ocean profile products.",
+                "formats": ["JSON (binned/profiles)"]
+              },
+              {
+                "name": "COARE flux products",
+                "what_it_is": "Derived air–sea flux estimates computed from surface meteorology and sea surface conditions.",
+                "formats": ["binned", "throughput", "NetCDF", "daily plots", "code"]
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "group": "ASIMet meteorology",
+              "record_of": [
+                "Wind velocity",
+                "Relative humidity",
+                "Air and sea surface temperatures",
+                "Incoming shortwave radiation",
+                "Incoming longwave radiation",
+                "Barometric pressure",
+                "Precipitation"
+              ]
+            }
+          ],
+          "links": [
+            {
+              "label": "UOP SAFARI landing page",
+              "url": "https://uop.whoi.edu/currentprojects/SAFARI/SAFARI.html"
+            }
+          ],
+          "data_availability_notes": [
+            "This record points to UOP-hosted downloads and examples. If SAFARI is published via an external THREDDS/OceanSITES catalog, add those catalog links here once confirmed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uop_project_stratus",
+      "acronym": "Stratus",
+      "title": "Project Stratus",
+      "status": "ongoing",
+      "summary": "Long-term surface mooring observations in the eastern tropical Pacific / eastern South Pacific off northern Chile to study air-sea interactions and surface forcing in the stratus deck region.",
+      "region": "Eastern Tropical Pacific",
+      "location": {
+        "description": "Stratus Ocean Reference Station (ORS), near 22°S, 85°W",
+        "latitude": -22.0,
+        "longitude": -85.0
+      },
+      "time_start": "2000-10-01",
+      "time_end": "Ongoing",
+      "keywords": ["stratus", "air-sea interaction", "OceanSITES", "meteorology", "fluxes", "mooring"],
+      "links": [
+        { "label": "Project overview (UOP)", "url": "https://uop.whoi.edu/currentprojects/stratus/stratus.html" },
+        { "label": "Real-time data (UOP)", "url": "https://uop.whoi.edu/currentprojects/stratus/stratusdata.html" },
+        { "label": "Archived data (UOP)", "url": "https://uop.whoi.edu/currentprojects/stratus/stratusarchive.html" },
+        { "label": "Reference data sets (UOP)", "url": "https://uop.whoi.edu/ReferenceDataSets/stratusreference.html" }
+      ],
+      "datasets": [
+        {
+          "id": "stratus_met_timeseries_all",
+          "title": "Real-time: Stratus Meteorological Time Series Data",
+          "status": "active",
+          "summary": "Hourly averaged ASIMet meteorological observations from the Stratus surface mooring. Hourly averages are transmitted approximately every 3 hours (~8 times daily). Data are sent in 6-hour buffers; satellite pass timing can occasionally exceed 6 hours, resulting in data gaps. Times in Argos transmissions reflect the start of the averaging hour; in near-real-time processing this time is corrected to the center of the sample beginning June 12, 2017 to accommodate mixed Argos/Iridium telemetry. A magnetic rotation is applied to wind components (east/north adjusted) in UOP near-real-time processing; the applied correction is reported in the text file headers served on the project real-time data page. Archived and recovered datasets are available via OceanSITES/THREDDS catalogs.",
+          "keywords": [
+            "Stratus",
+            "meteorology",
+            "ASIMet",
+            "air-sea fluxes",
+            "real-time",
+            "archive",
+            "OceanSITES",
+            "THREDDS",
+            "Argos",
+            "Iridium",
+            "hourly averaged",
+            "time correction (center of sample)",
+            "magnetic declination correction",
+            "IGRF",
+            "NCEI declination calculator",
+            "UOP instruments"
+          ],
+          "platform": "Surface mooring",
+          "region": "Eastern Tropical Pacific",
+          "time_start": "2000-10-01",
+          "time_end": null,
+          "doi": "",
+          "granularity": {
+            "temporal_resolution": "PT1H",
+            "aggregation": "Hourly averages",
+            "time_definition": "Time word is the start of the averaging period in transmissions; near-real-time processing corrects timestamps to the center of the sample beginning 2017-06-12.",
+            "known_gaps": "Data are transmitted in 6-hour buffers; satellite passes can be >6 hours apart at times, producing gaps."
+          },
+          "sampling_frequency": {
+            "telemetered_delivery": [
+              {
+                "method": "Argos/near-real-time",
+                "frequency": "Approximately every 3 hours (~8 times daily)"
+              }
+            ],
+            "buffering": "6-hour buffers",
+            "notes": "Delivery frequency differs from on-buoy sampling; dataset record is hourly averaged."
+          },
+          "processing_notes": [
+            "Wind components (east/north) are magnetically rotated in UOP near-real-time processing; correction values are normally taken from NCEI (formerly NGDC) online declination calculator using the IGRF model.",
+            "Applied correction is reported in the telemetered text file header served on the project real-time data page.",
+            "Timestamp correction to center-of-sample applied beginning 2017-06-12 in near-real-time processing."
+          ],
+          "instrumentation": {
+            "logger": "ASIMet",
+            "instrument_package_info": "/UOPinstruments/UOPinstruments.html",
+            "notes": "Meteorological data contained on this site is collected by ASIMet loggers. More detailed information about this instrument package is available at /UOPinstruments/UOPinstruments.html."
+          },
+          "parameters": [
+            {
+              "name": "air_pressure",
+              "unit": "mb",
+              "examples_in_logger": ["BPR"],
+              "resolution": "1 mb",
+              "sensor_range": "850–1050 mb"
+            },
+            {
+              "name": "air_temperature",
+              "unit": "degC",
+              "examples_in_logger": ["ATMP"],
+              "resolution": "0.01 degC",
+              "sensor_range": "-20 to +55 degC"
+            },
+            {
+              "name": "sea_surface_temperature",
+              "unit": "degC",
+              "examples_in_logger": ["STMP"],
+              "resolution": "0.01 degC",
+              "sensor_range": "-5 to +35 degC"
+            },
+            {
+              "name": "wind_u",
+              "unit": "m s-1",
+              "examples_in_logger": ["WNDE"],
+              "resolution": "0.1 m s-1",
+              "sensor_range": "0–60 m/s (direction 0–360 deg; rotation applied in processing)"
+            },
+            {
+              "name": "wind_v",
+              "unit": "m s-1",
+              "examples_in_logger": ["WNDN"],
+              "resolution": "0.1 m s-1",
+              "sensor_range": "0–60 m/s (direction 0–360 deg; rotation applied in processing)"
+            },
+            {
+              "name": "wind_speed",
+              "unit": "m s-1",
+              "examples_in_logger": ["WSPD"],
+              "resolution": "0.1 m s-1",
+              "sensor_range": "0–60 m/s"
+            },
+            {
+              "name": "wind_from_direction",
+              "unit": "degree",
+              "examples_in_logger": ["WDIR"],
+              "resolution": "1 degree",
+              "sensor_range": "0–360 deg"
+            },
+            {
+              "name": "relative_humidity",
+              "unit": "%",
+              "examples_in_logger": ["RH"],
+              "resolution": "1 %",
+              "sensor_range": "0–100%"
+            },
+            {
+              "name": "shortwave_radiation_downwelling",
+              "unit": "W m-2",
+              "examples_in_logger": ["SRAD"],
+              "resolution": "1 W m-2",
+              "sensor_range": "N/A"
+            },
+            {
+              "name": "longwave_radiation_downwelling",
+              "unit": "W m-2",
+              "examples_in_logger": ["LRAD"],
+              "resolution": "1 W m-2",
+              "sensor_range": "0–1400 W m-2"
+            },
+            {
+              "name": "precipitation",
+              "unit": "mm",
+              "examples_in_logger": ["PRC"],
+              "resolution": "1 mm",
+              "sensor_range": "0–50 mm"
+            },
+            {
+              "name": "sea_water_electrical_conductivity",
+              "unit": "S m-1",
+              "examples_in_logger": ["COND"],
+              "resolution": "0.01 S m-1",
+              "sensor_range": "0–7 S/m"
+            }
+          ],
+          "variables": [
+            "air_pressure",
+            "air_temperature",
+            "sea_surface_temperature",
+            "wind_eastward",
+            "wind_northward",
+            "wind_speed",
+            "wind_from_direction",
+            "relative_humidity",
+            "downwelling_shortwave_radiation",
+            "downwelling_longwave_radiation",
+            "precipitation_amount",
+            "sea_water_electrical_conductivity",
+            "sea_water_salinity"
+          ],
+          "links": [
+            {
+              "label": "UOP Stratus landing page",
+              "url": "https://uop.whoi.edu/currentprojects/Stratus/stratus.html"
+            },
+            {
+              "label": "OceanSITES THREDDS catalog",
+              "url": "https://dods.ndbc.noaa.gov/thredds/catalog/oceansites/DATA/Stratus/catalog.html"
+            },
+            {
+              "label": "NDBC/NCEI THREDDS catalog",
+              "url": "https://www.ncei.noaa.gov/thredds-ocean/catalog/ndbc/oceansites/DATA/Stratus/catalog.html"
+            },
+            {
+              "label": "NDBC station page",
+              "url": "https://www.ndbc.noaa.gov/station_page.php?station=32ST0&unit=M&tz=GMT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uop_project_whots",
+      "acronym": "WHOTS",
+      "title": "Project WHOTS - WHOI Hawaii Ocean Time-series Station",
+      "status": "ongoing",
+      "summary": "Moored observations of surface forcing in the central Pacific in cooperation with the Hawaii Ocean Time-series (HOT) project; long-term, high-quality air-sea fluxes.",
+      "region": "Central North Pacific (near Oahu)",
+      "location": {
+        "description": "WHOTS site near 22°46′N, 158°W",
+        "latitude": 22.7667,
+        "longitude": -158.0
+      },
+      "time_start": "2004-08-01",
+      "time_end": "Ongoing",
+      "keywords": ["WHOTS", "HOT", "air-sea fluxes", "OceanSITES", "meteorology", "mooring"],
+      "links": [
+        { "label": "Project overview (UOP)", "url": "https://uop.whoi.edu/currentprojects/WHOTS/whots.html" },
+        { "label": "UOP WHOTS data landing page", "url": "https://uop.whoi.edu/currentprojects/WHOTS/whotsdata.html" }
+      ],
+      "datasets": [
+        {
+          "id": "whots_met_timeseries_all",
+          "title": "Real-time: WHOTS Meteorological Time Series",
+          "status": "active",
+          "summary": "Hourly averaged meteorological data for the WHOI Hawaii Ocean Time Series Station (WHOTS). Current-deployment data are received via Service Argos four times daily and via Iridium transmissions hourly. Preliminary data are displayed in unedited form as time series plots and are available for download as ASCII files. Archived WHOTS meteorological data are available via OceanSITES/THREDDS catalogs. Subsurface temperature, conductivity, and velocity data are handled by the University of Hawaii.",
+          "keywords": [
+            "WHOTS",
+            "meteorology",
+            "ASIMet",
+            "air-sea fluxes",
+            "real-time",
+            "archive",
+            "OceanSITES",
+            "THREDDS",
+            "Service Argos",
+            "Iridium",
+            "hourly averaged",
+            "UOP instruments"
+          ],
+          "platform": "Surface mooring",
+          "region": "Central North Pacific (near Oahu)",
+          "time_start": "2004-08-13",
+          "time_end": null,
+          "doi": "",
+          "granularity": {
+            "temporal_resolution": "PT1H",
+            "aggregation": "Hourly averages",
+            "time_definition": "Time stamp is the start of the averaging period (see logger file headers)."
+          },
+          "sampling_frequency": {
+            "telemetered_delivery": [
+              { "method": "Service Argos", "frequency": "Four times daily" },
+              { "method": "Iridium", "frequency": "Hourly" }
+            ],
+            "notes": "Delivery frequency differs from on-buoy sampling; record provided here is hourly averaged."
+          },
+          "instrumentation": {
+            "logger": "ASIMet",
+            "instrument_package_info": "/UOPinstruments/UOPinstruments.html",
+            "notes": "Meteorological data contained on this site is collected by ASIMet loggers. More detailed information about this instrument package is available at /UOPinstruments/UOPinstruments.html."
+          },
+          "parameters": [
+            { "name": "wind_eastward_component", "unit": "m s-1", "examples_in_logger": ["WNDE"], "description": "Wind component toward east (after rotation described in logger header)." },
+            { "name": "wind_northward_component", "unit": "m s-1", "examples_in_logger": ["WNDN"], "description": "Wind component toward north (after rotation described in logger header)." },
+            { "name": "wind_speed", "unit": "m s-1", "examples_in_logger": ["WSPD"], "description": "Wind speed derived from components." },
+            { "name": "wind_from_direction", "unit": "degree", "examples_in_logger": ["WDIR"], "description": "Wind direction (convention per logger)." },
+            { "name": "relative_humidity", "unit": "%", "examples_in_logger": ["RH"], "description": "Relative humidity." },
+            { "name": "air_temperature", "unit": "degC", "examples_in_logger": ["ATMP"], "description": "Air temperature." },
+            { "name": "sea_surface_temperature", "unit": "degC", "examples_in_logger": ["STMP"], "description": "Sea surface temperature." },
+            { "name": "shortwave_radiation_downwelling", "unit": "W m-2", "examples_in_logger": ["SRAD"], "description": "Incoming shortwave radiation." },
+            { "name": "longwave_radiation_downwelling", "unit": "W m-2", "examples_in_logger": ["LRAD"], "description": "Incoming longwave radiation." },
+            { "name": "air_pressure", "unit": "mbar", "examples_in_logger": ["BPR"], "description": "Barometric pressure (logger column naming may vary)." },
+            { "name": "precipitation", "unit": "mm", "examples_in_logger": ["PRC"], "description": "Accumulated precipitation over reporting interval (per logger)." },
+            { "name": "precipitation_rate", "unit": "mm hr-1", "examples_in_logger": ["PRATE"], "description": "Precipitation rate." },
+            { "name": "sea_water_salinity", "unit": "1", "examples_in_logger": ["SAL"], "description": "Near-surface salinity (if present in the logger stream)." },
+            { "name": "sea_water_electrical_conductivity", "unit": "S m-1", "examples_in_logger": ["COND"], "description": "Near-surface conductivity (if present in the logger stream)." }
+          ],
+          "variables": [
+            "wind_eastward",
+            "wind_northward",
+            "wind_speed",
+            "wind_from_direction",
+            "relative_humidity",
+            "air_temperature",
+            "sea_surface_temperature",
+            "downwelling_shortwave_radiation",
+            "downwelling_longwave_radiation",
+            "air_pressure",
+            "precipitation_amount",
+            "precipitation_rate",
+            "sea_water_salinity",
+            "sea_water_electrical_conductivity"
+          ],
+          "data_handling_notes": [
+            "Preliminary telemetered data may be unedited (QA/QC applied later in recovered datasets).",
+            "Subsurface temperature, conductivity and velocity data from WHOTS deployments are handled by the University of Hawaii. Please visit the UH WHOTS Database to access."
+          ],
+          "links": [
+            { "label": "UOP WHOTS landing page", "url": "https://uop.whoi.edu/currentprojects/WHOTS/whots.html" },
+            { "label": "OceanSITES THREDDS catalog", "url": "https://dods.ndbc.noaa.gov/thredds/catalog/oceansites/DATA/WHOTS/catalog.html" },
+            { "label": "NDBC/NCEI THREDDS catalog", "url": "https://www.ncei.noaa.gov/thredds-ocean/catalog/ndbc/oceansites/DATA/WHOTS/catalog.html" },
+            { "label": "UH WHOTS Database", "url": "https://www.soest.hawaii.edu/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uop_project_airswot",
+      "acronym": "AirSWOT",
+      "title": "AirSWOT (April 2015 Field Campaign)",
+      "status": "archived",
+      "summary": "April 2015 ship-based field campaign aboard R/V Shana Rae to support the AirSWOT study area off central California. The cruise (2015-04-17 to 2015-04-20 UTC) deployed three EM-APEX profiling floats and conducted intensive UCTD hydrographic sampling to investigate sea surface height variability, waves, and currents.",
+      "region": "Central California Coast (off Santa Cruz)",
+      "time_start": "2015-04-17",
+      "time_end": "2015-04-20",
+      "keywords": [
+        "AirSWOT",
+        "field campaign",
+        "Santa Cruz",
+        "R/V Shana Rae",
+        "April 2015",
+        "UCTD",
+        "EM-APEX",
+        "profiling floats",
+        "hydrography"
+      ],
+      "links": [
+        {
+          "label": "Project overview (UOP)",
+          "url": "https://uop.whoi.edu/projects/airswot/AirSWOT.html"
+        }
+      ],
+      "datasets": [
+        {
+          "id": "airswot_uctd_2015",
+          "title": "AirSWOT UCTD Hydrographic Survey (Apr 2015)",
+          "status": "archived",
+          "summary": "158 Underway CTD (UCTD) casts collected over ~2.5 days during the April 2015 AirSWOT campaign. Sampling followed straight-line sections (two longest sections ~180 km and ~110 km; others ~40–50 km) and included a 40 km × 40 km feature survey region. A section was collected along SARAL/AltiKa altimeter tracks on 2015-04-17. Cast spacing median was 3.7 km. Cast depths ranged from 450–500 m; first 5 m excluded from analysis. Density and dynamic height were derived from conductivity, temperature, and pressure.",
+          "platform": "Research vessel (R/V Shana Rae)",
+          "region": "Central California Coast (off Santa Cruz)",
+          "time_start": "2015-04-17T15:00:00Z",
+          "time_end": "2015-04-20T17:00:00Z",
+          "doi": "",
+          "granularity": {
+            "temporal_resolution": "Event-based (cast)",
+            "aggregation": "Per-cast vertical profiles",
+            "spatial_design": "Straight-line sections + 40 km × 40 km feature survey"
+          },
+          "sampling_frequency": {
+            "casts_completed": 158,
+            "median_spacing_km": 3.7,
+            "depth_range_m": "450–500",
+            "deep_cast_threshold_dbar": 480
+          },
+          "variables": [
+            "sea_water_temperature",
+            "sea_water_salinity",
+            "sea_water_pressure",
+            "sea_water_density",
+            "dynamic_height"
+          ],
+          "keywords": [
+            "UCTD",
+            "Underway CTD",
+            "hydrography",
+            "density anomaly",
+            "dynamic height",
+            "SARAL/AltiKa",
+            "altimeter validation"
+          ],
+          "links": [
+            {
+              "label": "UOP AirSWOT landing page",
+              "url": "https://uop.whoi.edu/projects/airswot/AirSWOT.html"
+            }
+          ]
+        },
+        {
+          "id": "airswot_em_apex_2015",
+          "title": "AirSWOT EM-APEX Profiling Float Data (Apr 2015)",
+          "status": "archived",
+          "summary": "Three Teledyne Webb Research (TWR) EM-APEX floats collected time series of temperature, salinity, and horizontal water velocity during the April 2015 AirSWOT campaign. Floats were deployed between 2015-04-17 and 2015-04-18 and recovered on 2015-04-20. Drift tracks documented float motion over the ~3 day experiment.",
+          "platform": "EM-APEX profiling floats",
+          "region": "Central California Coast (off Santa Cruz)",
+          "time_start": "2015-04-17T18:39:00Z",
+          "time_end": "2015-04-20T11:35:00Z",
+          "doi": "",
+          "granularity": {
+            "temporal_resolution": "Profile/time-series",
+            "aggregation": "Per-profile vertical structure + time series",
+            "experiment_duration_days": 3
+          },
+          "sampling_frequency": {
+            "floats_deployed": 3
+          },
+          "float_metadata": [
+            {
+              "serial_number": "6665",
+              "deploy_datetime_utc": "2015-04-17T18:39:00Z",
+              "deploy_latitude": "36° 41.14’ N",
+              "deploy_longitude": "122° 21.24’ W",
+              "recover_datetime_utc_approx": "2015-04-20T11:35:00Z",
+              "recover_latitude_approx": "36° 37.45’ N",
+              "recover_longitude_approx": "122° 26.43’ W"
+            },
+            {
+              "serial_number": "6667",
+              "deploy_datetime_utc": "2015-04-17T22:56:00Z",
+              "deploy_latitude": "36° 07.77’ N",
+              "deploy_longitude": "122° 30.88’ W",
+              "recover_datetime_utc_approx": "2015-04-20T04:30:00Z",
+              "recover_latitude_approx": "35° 59.65’ N",
+              "recover_longitude_approx": "122° 23.40’ W"
+            },
+            {
+              "serial_number": "6675",
+              "deploy_datetime_utc": "2015-04-18T00:37:00Z",
+              "deploy_latitude": "36° 06.01’ N",
+              "deploy_longitude": "122° 15.02’ W",
+              "recover_datetime_utc_approx": "2015-04-20T01:30:00Z",
+              "recover_latitude_approx": "35° 52.01’ N",
+              "recover_longitude_approx": "122° 03.01’ W"
+            }
+          ],
+          "variables": [
+            "sea_water_temperature",
+            "sea_water_salinity",
+            "sea_water_velocity"
+          ],
+          "keywords": [
+            "EM-APEX",
+            "profiling float",
+            "horizontal velocity",
+            "drift tracks",
+            "time series"
+          ],
+          "links": [
+            {
+              "label": "UOP AirSWOT landing page",
+              "url": "https://uop.whoi.edu/projects/airswot/AirSWOT.html"
+            }
+          ],
+          "data_notes": [
+            "Recovery times and locations are approximate."
+          ]
+        }
+      ]
+    }
+  ]
+}

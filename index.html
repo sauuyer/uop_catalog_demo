@@ -43,76 +43,108 @@
   <script>
     let datasets = [];
     let fuse = null;
-
+  
     const elQ = document.getElementById('q');
     const elPlatform = document.getElementById('platform');
     const elStatus = document.getElementById('status');
     const elResults = document.getElementById('results');
-
+  
     function escapeHtml(s) {
       return (s ?? '').toString().replace(/[&<>"']/g, c => ({
         '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
       }[c]));
     }
-
+  
     function render(list, note) {
       elStatus.textContent = note;
-
+  
       elResults.innerHTML = list.map(d => {
-        const time = [d.time_start, d.time_end].filter(Boolean).join(" → ");
+        // Always treat start/end as displayable strings if present
+const start = d.time_start != null ? String(d.time_start) : null;
+const end = d.time_end != null ? String(d.time_end) : null;
+
+let temporalRange = "—";
+
+if (start && end) {
+  temporalRange = `${start} → ${end}`;
+} else if (start) {
+  temporalRange = `${start} → Present`;
+} else if (end) {
+  temporalRange = end;
+}
         const links = (d.links || []).map(l =>
           `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
         ).join("");
-
+  
         const tags = []
+          .concat(d.project_title ? [`Project: ${d.project_title}`] : [])
+          .concat(d.project_status ? [`Project status: ${d.project_status}`] : [])
           .concat(d.platform ? [`Platform: ${d.platform}`] : [])
           .concat(d.region ? [`Region: ${d.region}`] : [])
+          .concat(d.granularity?.temporal_resolution
+              ? [`Resolution: ${d.granularity.temporal_resolution}`]
+              : [])
+          .concat(
+              (d.sampling_frequency?.telemetered_delivery || [])
+                .map(t => `Telemetry: ${t.method}`)
+          )
           .concat((d.variables || []).slice(0, 4).map(v => `Var: ${v}`))
           .concat((d.keywords || []).slice(0, 4).map(k => k));
-
+  
         return `
           <div class="card">
             <div class="title">${escapeHtml(d.title)}</div>
             <div class="small">${escapeHtml(d.summary)}</div>
-            <div class="small"><strong>Time:</strong> ${escapeHtml(time || '—')} ${d.doi ? ` · <strong>DOI:</strong> ${escapeHtml(d.doi)}` : ''}</div>
+            <div class="small"><strong>Temporal range:</strong> ${escapeHtml(temporalRange)} ${d.doi ? ` · <strong>DOI:</strong> ${escapeHtml(d.doi)}` : ''}</div>
             <div class="links">${links}</div>
             <div class="tags">${tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>
           </div>
         `;
       }).join("");
-
+  
       if (!list.length) {
-        elResults.innerHTML = `<p class="muted">No matches. Try a different query (e.g., “salinity”, “met station”, “North Atlantic”).</p>`;
+        elResults.innerHTML = `<p class="muted">No matches. Try a different query.</p>`;
       }
     }
-
+  
     function getFilteredBase() {
       const p = elPlatform.value;
       return p ? datasets.filter(d => (d.platform || '').toLowerCase() === p.toLowerCase()) : datasets;
     }
-
+  
     function doSearch() {
       const q = elQ.value.trim();
       const base = getFilteredBase();
-
+  
       if (!q) {
         render(base, `Showing ${base.length} dataset(s).`);
         return;
       }
-
-      // Fuse searches over full datasets list, so we search and then filter by platform
+  
       const results = fuse.search(q).map(r => r.item);
       const filtered = elPlatform.value
         ? results.filter(d => (d.platform || '').toLowerCase() === elPlatform.value.toLowerCase())
         : results;
-
+  
       render(filtered, `Found ${filtered.length} match(es) for “${q}”.`);
     }
-
+  
     async function init() {
-      const res = await fetch('./datasets.json');
-      datasets = await res.json();
-
+      // Use absolute path to avoid relative-path surprises
+      const res = await fetch(`/datasets.json?v=${Date.now()}`); // cache-buster while developing
+      const data = await res.json();
+  
+      // Flatten projects->datasets into a single array
+      datasets = (data.projects || []).flatMap(p =>
+        (p.datasets || []).map(d => ({
+          ...d,
+          project_id: p.id,
+          project_title: p.title,
+          project_status: p.status,
+          project_region: p.region
+        }))
+      );
+  
       // Populate platform dropdown
       const platforms = Array.from(new Set(datasets.map(d => d.platform).filter(Boolean))).sort();
       platforms.forEach(p => {
@@ -121,11 +153,11 @@
         opt.textContent = p;
         elPlatform.appendChild(opt);
       });
-
-      // Fuse config: weight important fields
+  
+      // Fuse config
       fuse = new Fuse(datasets, {
         includeScore: true,
-        threshold: 0.35,           // lower = stricter, higher = fuzzier
+        threshold: 0.35,
         ignoreLocation: true,
         minMatchCharLength: 2,
         keys: [
@@ -134,18 +166,18 @@
           { name: "variables", weight: 0.18 },
           { name: "summary", weight: 0.12 },
           { name: "platform", weight: 0.03 },
-          { name: "region", weight: 0.02 }
+          { name: "region", weight: 0.02 },
+          { name: "project_title", weight: 0.05 }
         ]
       });
-
+  
       // Wire events
       elQ.addEventListener('input', doSearch);
       elPlatform.addEventListener('change', doSearch);
-
-      render(datasets, `Showing ${datasets.length} dataset(s).`);
-      elStatus.textContent = `Loaded ${datasets.length} dataset(s). Type to search.`;
+  
+      render(datasets, `Loaded ${datasets.length} dataset(s). Type to search.`);
     }
-
+  
     init().catch(err => {
       console.error(err);
       elStatus.textContent = "Failed to load datasets.json (check the server is running).";
