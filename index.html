@@ -27,8 +27,8 @@
 
   <div class="row">
     <input id="q" type="search" placeholder="Search: temperature, glider CTD, humidity, North Atlantic…" autocomplete="off" />
-    <select id="platform">
-      <option value="">All platforms</option>
+    <select id="parameter">
+      <option value="">All dataset parameters</option>
     </select>
   </div>
 
@@ -48,6 +48,7 @@
     const elPlatform = document.getElementById('platform');
     const elStatus = document.getElementById('status');
     const elResults = document.getElementById('results');
+    const elParameter = document.getElementById('parameter');
   
     function escapeHtml(s) {
       return (s ?? '').toString().replace(/[&<>"']/g, c => ({
@@ -108,8 +109,12 @@ if (start && end) {
     }
   
     function getFilteredBase() {
-      const p = elPlatform.value;
-      return p ? datasets.filter(d => (d.platform || '').toLowerCase() === p.toLowerCase()) : datasets;
+      const param = elParameter.value;
+      return param
+        ? datasets.filter(d =>
+          (d.variables || []).includes(param)
+        )
+      : datasets;
     }
   
     function doSearch() {
@@ -145,13 +150,18 @@ if (start && end) {
         }))
       );
   
-      // Populate platform dropdown
-      const platforms = Array.from(new Set(datasets.map(d => d.platform).filter(Boolean))).sort();
-      platforms.forEach(p => {
+      // Populate parameters filter dropdown
+      const parameters = Array.from(
+        new Set(
+          datasets.flatMap(d => d.variables || [])
+        )
+      ).sort();
+
+      parameters.forEach(p => {
         const opt = document.createElement('option');
         opt.value = p;
         opt.textContent = p;
-        elPlatform.appendChild(opt);
+        elParameter.appendChild(opt);
       });
   
       // Fuse config
@@ -173,7 +183,7 @@ if (start && end) {
   
       // Wire events
       elQ.addEventListener('input', doSearch);
-      elPlatform.addEventListener('change', doSearch);
+      elParameter.addEventListener('change', doSearch);
   
       render(datasets, `Loaded ${datasets.length} dataset(s). Type to search.`);
     }
