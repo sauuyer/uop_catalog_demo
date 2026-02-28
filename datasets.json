@@ -187,7 +187,7 @@
           "platform": "Surface mooring",
           "region": "Eastern Tropical Pacific",
           "time_start": "2000-10-01",
-          "time_end": null,
+          "time_end": "Ongoing",
           "doi": "",
           "granularity": {
             "temporal_resolution": "PT1H",
@@ -379,7 +379,7 @@
           "platform": "Surface mooring",
           "region": "Central North Pacific (near Oahu)",
           "time_start": "2004-08-13",
-          "time_end": null,
+          "time_end": "Ongoing",
           "doi": "",
           "granularity": {
             "temporal_resolution": "PT1H",
