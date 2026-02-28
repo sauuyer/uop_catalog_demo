@@ -4,25 +4,21 @@ This repository contains a client-side demo data catalog. It provides a simple, 
 
 Live demo: https://sauuyer.github.io/uop_catalog_demo/
 
----
+This repo demonstrates a lightweight, browser-based data catalog:
 
-## What’s Included
+- Very lightweight setup
+- Fuzzy search over dataset metadata to allow for flexible and research-forward search queries from users
+- This will improve the functionality of the UOP's current website to make datasets more UOP data more findable and indexed
+- This demo has been built for proof of concept and prototyping reasons
+- Uses Fuse.js for search and filtering within the browser.
+
+
+## Files
 
 - `index.html` – Static HTML search UI for the catalog.  
 - `datasets.json` – Structured catalog of UOP projects and datasets.  
 - `README.md` – This overview.  
 
----
 
-## Purpose
 
-This repo demonstrates a lightweight, **browser-based data catalog**:
 
-- No backend required
-- Fuzzy search over dataset metadata
-- Structured project → datasets hierarchy
-- Designed for quick exploration and prototyping
-
-Uses Fuse.js for search and filtering within the browser.
-
----
