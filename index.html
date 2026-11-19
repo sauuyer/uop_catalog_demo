@@ -154,7 +154,6 @@
     <form class="uc-search" role="search" onsubmit="return false">
       <label class="uc-sr" for="uc-q">Search datasets</label>
       <input id="uc-q" type="search" autocomplete="off" placeholder="Search across UOP projects and datasets" />
-      <p class="uc-hint">Try variable names, places, project names or years, such as “salinity Arabian Sea” or “wind 1996”. Results match all of your words; typos and partial words are fine.</p>
     </form>
 
     <div class="uc-layout" id="uc-app" hidden>
@@ -754,10 +753,6 @@
     /* =====================================================================
        Visualisation panel: map / timeline / depth
        ===================================================================== */
-    const hoverDefault = {
-      time: 'One bar per project, on one shared time axis. Drag across the chart to filter by period; click once to clear.',
-      map: 'Click a marker to see its project. Use “Draw filter box” to limit results to an area.'
-    };
     const hoverHtml = d => `<strong>${esc(label(d))}</strong> · ${esc(d.project.short)} — ${esc(periodText(d.startMs, d.endMs))} · depth ${esc(depthText(d.depth))}${d.depth && d.depth.n_levels > 1 ? ` (${d.depth.n_levels} levels)` : ''} · ${esc((d.granularity || {}).temporal_resolution || '—')} sampling · ${esc(d.vkeys.slice(0, 4).map(k => varInfo.get(k).label).join(', '))}${d.vkeys.length > 4 ? '…' : ''}`;
 
     function svgPoint(svg, e) {
@@ -778,9 +773,9 @@
       ov.addEventListener('pointermove', e => {
         const p = svgPoint(svg, e);
         if (start !== null) { if (Math.abs(coord(e) - start) > 4) { dragged = true; draw(start, coord(e)); } return; }
-        const hit = cfg.at(p); $('#uc-hover').innerHTML = hit ? (cfg.hoverFn || hoverHtml)(hit) : hoverDefault[state.view];
+        const hit = cfg.at(p), hv = $('#uc-hover'); hv.hidden = !hit; hv.innerHTML = hit ? (cfg.hoverFn || hoverHtml)(hit) : '';
       });
-      ov.addEventListener('pointerleave', () => { if (start === null) $('#uc-hover').innerHTML = hoverDefault[state.view]; });
+      ov.addEventListener('pointerleave', () => { if (start === null) $('#uc-hover').hidden = true; });
       const finish = e => {
         if (start === null) return;
         const s0 = start, s1 = coord(e); start = null;
@@ -883,11 +878,10 @@
       if (v !== 'map' && boxMode) endBoxMode();
       root.querySelectorAll('.uc-seg button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
       $('#uc-map').hidden = v !== 'map'; $('#uc-chart').hidden = v !== 'time';
-      $('#uc-hover').hidden = v === 'none'; $('#uc-draw').hidden = v !== 'map'; $('#uc-clearbox').hidden = v !== 'map' || !areaActive(state);
+      $('#uc-hover').hidden = true; $('#uc-draw').hidden = v !== 'map'; $('#uc-clearbox').hidden = v !== 'map' || !areaActive(state);
       $('#uc-cleartime').hidden = v !== 'time' || !timeActive(state);
       $('#uc-cleartime').textContent = `✕ Clear period (${ymLabel(state.from) || 'start'} – ${ymLabel(state.to) || 'end'})`;
       $('#uc-vizhelp').textContent = '';
-      if (v !== 'none') $('#uc-hover').innerHTML = hoverDefault[v];
       if (v === 'map') renderMap(res.list);
       else if (v === 'time') renderTimeline(res);
     }
