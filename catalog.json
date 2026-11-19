@@ -1,0 +1,2729 @@
+{
+  "catalog": {
+    "id": "uop_catalog",
+    "title": "Upper Ocean Processes (UOP) Data Catalog",
+    "description": "Catalog of UOP projects and datasets, built from the metadata inside the processed NetCDF files.",
+    "generated_utc": "2026-11-18T21:15:08Z",
+    "schema_version": "2.0.0",
+    "n_projects": 4,
+    "n_datasets": 24
+  },
+  "projects": [
+    {
+      "id": "asrex91",
+      "acronym": "ASREX91",
+      "title": "1991 Acoustic Surface Reverberation Experiment (ASREX91)",
+      "status": "archived",
+      "summary": "The 1991 Acoustic Surface Reverberation Experiment (ASREX 91), funded by the Office Of Naval Research, took place in the eastern North Pacific, about 500 km from the coast of Vancouver Island, British Columbia. The water depth was approximately 3000 m. The Upper Ocean Processes Group deployed three oceanographic moorings as part of an experiment aimed at understanding near-surface acoustic reverberation in high sea states. Two of the moorings were dedicated to the measurement of surface waves. The third measured meteorological and oceanographic variables. The deployment period, during the winter of 1991-1992, was characterized by high winds and large waves.",
+      "region": "Eastern North Pacific, about 500 km from the coast of Vancouver Island, British Columbia",
+      "location": {
+        "bbox": {
+          "lat_min": 49.23,
+          "lat_max": 49.23,
+          "lon_min": -132,
+          "lon_max": -132
+        },
+        "latitude": 49.23,
+        "longitude": -132,
+        "points": [
+          {
+            "latitude": 49.23,
+            "longitude": -132
+          }
+        ]
+      },
+      "time_start": "1991-11-01T00:00:56Z",
+      "time_end": "1992-01-07T08:07:30Z",
+      "keywords": [
+        "OCEANOGRAPHY: GENERAL > Marine meteorology",
+        "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+        "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature",
+        "OCEANOGRAPHY: PHYSICAL > Currents"
+      ],
+      "creators": [
+        "Nan Galbraith"
+      ],
+      "institutions": [
+        "Woods Hole Oceanographic Institution"
+      ],
+      "publishers": [
+        "Upper Ocean Processes Group"
+      ],
+      "licenses": [
+        "CC BY-NC 4.0"
+      ],
+      "n_datasets": 3,
+      "links": [],
+      "datasets": [
+        {
+          "id": "asrex91met",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Surface meteorology time series data from a surface mooring deployed 500km off the coast of Vancouver Island, British Columbia",
+          "summary": "Meteorological data from a vector averaging wind recoder (VAWR) instrument deployed on a surface mooring 500km off the coast of Vancouver Island, British Columbia. This mooring was deployed as part of the ASREX91 experiment from 1991 to 1992, and aimed at understanding near-surface acoustic reverberation in high sea states",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: GENERAL > Marine meteorology",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Eastern North Pacific, about 500 km from the coast of Vancouver Island, British Columbia",
+          "time_start": "1991-11-01T00:07:30Z",
+          "time_end": "1992-01-07T08:07:30Z",
+          "granularity": {
+            "temporal_resolution": "15 minutes",
+            "temporal_resolution_iso": "PT900S",
+            "n_samples": 6455,
+            "time_coverage_duration": "P67D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 49.23,
+              "lat_max": 49.23,
+              "lon_min": -132,
+              "lon_max": -132
+            },
+            "latitude": 49.23,
+            "longitude": -132
+          },
+          "depth": {
+            "min": 0,
+            "max": 0,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0
+            ],
+            "n_levels": 1
+          },
+          "variables": [
+            "air temperature",
+            "relative humidity",
+            "barometric pressure",
+            "surface downwelling longwave radiation",
+            "shortwave radiation",
+            "RAIN",
+            "eastward wind velocity",
+            "northward wind velocity",
+            "sea temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "AIRT",
+              "long_name": "air temperature",
+              "standard_name": "air_temperature",
+              "units": "degree_C"
+            },
+            {
+              "code": "RELH",
+              "long_name": "relative humidity",
+              "standard_name": "relative_humidity",
+              "units": "%"
+            },
+            {
+              "code": "ATMS",
+              "long_name": "barometric pressure",
+              "standard_name": "air_pressure",
+              "units": "mbar"
+            },
+            {
+              "code": "LW",
+              "long_name": "surface downwelling longwave radiation",
+              "standard_name": "surface_downwelling_longwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "SW",
+              "long_name": "shortwave radiation",
+              "standard_name": "surface_downwelling_shortwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "RAIN",
+              "long_name": "RAIN",
+              "standard_name": "rainfall_rate",
+              "units": null
+            },
+            {
+              "code": "UWND",
+              "long_name": "eastward wind velocity",
+              "standard_name": "eastward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "VWND",
+              "long_name": "northward wind velocity",
+              "standard_name": "northward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "TEMP",
+              "long_name": "sea temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1992). Acoustic Surface Reverberation Experiment 1991 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex91met_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-16T17:49:21Z",
+          "file": {
+            "name": "asrex91met.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX91/netCDF/asrex91met.nc",
+            "format": "NetCDF",
+            "size_bytes": 334074,
+            "sha256": "72ebfc321376ebfbc425a49122d0c41f97dbb15e9892801af88ba26dc2354873"
+          },
+          "links": []
+        },
+        {
+          "id": "asrex91temp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature time series data from a surface mooring deployed 500km off the coast of Vancouver Island, British Columbia",
+          "summary": "Tempurature data from a surface mooring deployed 500km off the coast of Vancouver Island, British Columbia 1991-1992. Multiple different subsurface temperature sensors were installed at eleven depths from 1m to 120m. This mooring was deployed as part of the ASREX91 experiment aimed at understanding near-surface acoustic reverberation in high sea states",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "Eastern North Pacific, about 500 km from the coast of Vancouver Island, British Columbia",
+          "time_start": "1991-11-01T00:07:30Z",
+          "time_end": "1992-01-07T07:52:30Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 12927,
+            "time_coverage_duration": "P67D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 49.23,
+              "lat_max": 49.23,
+              "lon_min": -132,
+              "lon_max": -132
+            },
+            "latitude": 49.23,
+            "longitude": -132
+          },
+          "depth": {
+            "min": 1,
+            "max": 120,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1,
+              2,
+              5,
+              10,
+              15,
+              20,
+              40,
+              60,
+              80,
+              100,
+              120
+            ],
+            "n_levels": 11
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1992). Acoustic Surface Reverberation Experiment 1991 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex91temp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-04T21:54:23Z",
+          "file": {
+            "name": "asrex91temp.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX91/netCDF/asrex91temp.nc",
+            "format": "NetCDF",
+            "size_bytes": 700019,
+            "sha256": "097a8ca87d4f86311b0961bf46df821a33ad93ee75dece881df5574b1e9ae33f"
+          },
+          "links": []
+        },
+        {
+          "id": "asrex91vel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity time series data from a surface mooring deployed 500km off the coast of Vancouver Island, British Columbia",
+          "summary": "Velocity data from a surface mooring deployed 500km off the coast of Vancouver Island, British Columbia 1991-1992. Vector measuring current meters (VMCMs) were installed at four depths: 5, 10, 15 and 20m. This mooring was deployed as part of the ASREX91 experiment aimed at understanding near-surface acoustic reverberation in high sea states",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Eastern North Pacific, about 500 km from the coast of Vancouver Island, British Columbia",
+          "time_start": "1991-11-01T00:00:56Z",
+          "time_end": "1992-01-07T08:00:56Z",
+          "granularity": {
+            "temporal_resolution": "1 minute",
+            "temporal_resolution_iso": "PT1M",
+            "n_samples": 51713,
+            "time_coverage_duration": "P67D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 49.23,
+              "lat_max": 49.23,
+              "lon_min": -132,
+              "lon_max": -132
+            },
+            "latitude": 49.23,
+            "longitude": -132
+          },
+          "depth": {
+            "min": 5,
+            "max": 20,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              5,
+              10,
+              15,
+              20
+            ],
+            "n_levels": 4
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1992). Acoustic Surface Reverberation Experiment 1991 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex91vel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:06:24Z",
+          "file": {
+            "name": "asrex91vel.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX91/netCDF/asrex91vel.nc",
+            "format": "NetCDF",
+            "size_bytes": 2099407,
+            "sha256": "537ab4c61bd34b8762dabc3da8a9a06d3b773af290d84267f8fd7f5ae60f59a8"
+          },
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "asrex93",
+      "acronym": "ASREX93",
+      "title": "1993 Acoustic Surface Reverberation Experiment (ASREX93)",
+      "status": "archived",
+      "summary": "The 1993 Acoustic Surface Reverberation Experiment (ASREX 93), funded by the Office Of Naval Research, took place in the western North Atlantic, roughly half way between Bermuda and Cape Hatteras, North Carolina. The nominal water depth was 5370 m. This field study was intended to improve understanding of near-surface acoustic reverberation in high sea states. The Upper Ocean Processes Group deployed two oceanographic moorings as part of a five mooring array. One of the UOP moorings was dedicated to the measurement of surface waves, the other measured meteorological and oceanographic variables.",
+      "region": "Western North Atlantic, roughly half way between Bermuda and Cape Hatteras, North Carolina",
+      "location": {
+        "bbox": {
+          "lat_min": 33.878334,
+          "lat_max": 33.900002,
+          "lon_min": -69.747169,
+          "lon_max": -69.699997
+        },
+        "points": [
+          {
+            "latitude": 33.900002,
+            "longitude": -69.699997
+          },
+          {
+            "latitude": 33.878334,
+            "longitude": -69.747169
+          }
+        ]
+      },
+      "time_start": "1993-12-15T00:18:45Z",
+      "time_end": "1994-03-24T11:26:15Z",
+      "keywords": [
+        "OCEANOGRAPHY: GENERAL > Marine meteorology",
+        "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+        "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature",
+        "OCEANOGRAPHY: PHYSICAL > Currents"
+      ],
+      "creators": [
+        "Nan Galbraith"
+      ],
+      "institutions": [
+        "Woods Hole Oceanographic Institution"
+      ],
+      "publishers": [
+        "Upper Ocean Processes Group"
+      ],
+      "licenses": [
+        "CC BY-NC 4.0"
+      ],
+      "n_datasets": 3,
+      "links": [],
+      "datasets": [
+        {
+          "id": "asrex93met",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Surface meteorology time series data from a surface mooring deployed in the western North Atlantic in 1993",
+          "summary": "Meteorological data from a vector averaging wind recorder (VAWR) instrument deployed on a surface mooring roughly half way between Bermuda and Cape Hatteras, North Carolina. The ASREX93 field study was from December 1993 to March 1994, and aimed to improve understanding of near-surface acoustic reverberation in high sea states.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: GENERAL > Marine meteorology",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Western North Atlantic, roughly half way between Bermuda and Cape Hatteras, North Carolina",
+          "time_start": "1993-12-15T00:18:45Z",
+          "time_end": "1994-03-24T11:26:15Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 19098,
+            "time_coverage_duration": "P99D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 33.900002,
+              "lat_max": 33.900002,
+              "lon_min": -69.699997,
+              "lon_max": -69.699997
+            },
+            "latitude": 33.900002,
+            "longitude": -69.699997
+          },
+          "depth": {
+            "min": 0,
+            "max": 0,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0
+            ],
+            "n_levels": 1
+          },
+          "variables": [
+            "air temperature",
+            "relative humidity",
+            "barometric pressure",
+            "surface downwelling longwave radiation",
+            "shortwave radiation",
+            "RAIN",
+            "eastward wind velocity",
+            "northward wind velocity",
+            "sea temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "AIRT",
+              "long_name": "air temperature",
+              "standard_name": "air_temperature",
+              "units": "degree_C"
+            },
+            {
+              "code": "RELH",
+              "long_name": "relative humidity",
+              "standard_name": "relative_humidity",
+              "units": "%"
+            },
+            {
+              "code": "ATMS",
+              "long_name": "barometric pressure",
+              "standard_name": "air_pressure",
+              "units": "mbar"
+            },
+            {
+              "code": "LW",
+              "long_name": "surface downwelling longwave radiation",
+              "standard_name": "surface_downwelling_longwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "SW",
+              "long_name": "shortwave radiation",
+              "standard_name": "surface_downwelling_shortwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "RAIN",
+              "long_name": "RAIN",
+              "standard_name": "rainfall_rate",
+              "units": null
+            },
+            {
+              "code": "UWND",
+              "long_name": "eastward wind velocity",
+              "standard_name": "eastward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "VWND",
+              "long_name": "northward wind velocity",
+              "standard_name": "northward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "TEMP",
+              "long_name": "sea temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1994). Acoustic Surface Reverberation Experiment 1993 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex93met_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-16T17:49:33Z",
+          "file": {
+            "name": "asrex93met.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX93/netCDF/asrex93met.nc",
+            "format": "NetCDF",
+            "size_bytes": 890366,
+            "sha256": "97420aa209f2c9895dc66623627ea28bb9cfce1617fa878e50c5e7ec727f6463"
+          },
+          "links": []
+        },
+        {
+          "id": "asrex93temp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from a mooring deployed in the western North Atlantic in 1993",
+          "summary": "Temperature data from multiple different temperature sensors installed at twenty depths ranging from 1m to 500m on a a mooring deployed roughly half way between Bermuda and Cape Hatteras, North Carolina. The ASREX93 field study was from December 1993 to March 1994, and aimed to improve understanding of near-surface acoustic reverberation in high sea states.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "Western North Atlantic, roughly half way between Bermuda and Cape Hatteras, North Carolina",
+          "time_start": "1993-12-15T23:45:01Z",
+          "time_end": "1994-03-12T23:37:31Z",
+          "granularity": {
+            "temporal_resolution": "PT449S",
+            "temporal_resolution_iso": "PT449S",
+            "n_samples": 16704,
+            "time_coverage_duration": "P86D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 33.878334,
+              "lat_max": 33.878334,
+              "lon_min": -69.747169,
+              "lon_max": -69.747169
+            },
+            "latitude": 33.878334,
+            "longitude": -69.747169
+          },
+          "depth": {
+            "min": 1,
+            "max": 500,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1,
+              5,
+              10,
+              15,
+              20,
+              37,
+              50,
+              75,
+              100,
+              125,
+              150,
+              175,
+              200,
+              230,
+              260,
+              300,
+              350,
+              400,
+              450,
+              500
+            ],
+            "n_levels": 20
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1994). Acoustic Surface Reverberation Experiment 1993 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex93temp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-04T21:54:27Z",
+          "file": {
+            "name": "asrex93temp.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX93/netCDF/asrex93temp.nc",
+            "format": "NetCDF",
+            "size_bytes": 1497767,
+            "sha256": "ff9b11d04c31ced2de264a0ad9a2bc94cfb26b73c5c0c03f1aa7244a11a09057"
+          },
+          "links": []
+        },
+        {
+          "id": "asrex93vel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from a mooring deployed deployed in the western North Atlantic in 1993",
+          "summary": "Velocity data from vector measuring current meters (VMCMs) installed at 11 depths from 5m to 500m on a mooring deployed roughly half way between Bermuda and Cape Hatteras, North Carolina. The ASREX93 field study was from December 1993 to March 1994, and aimed to improve understanding of near-surface acoustic reverberation in high sea states.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Western North Atlantic, roughly half way between Bermuda and Cape Hatteras, North Carolina",
+          "time_start": "1993-12-16T11:59:00Z",
+          "time_end": "1994-03-12T19:59:00Z",
+          "granularity": {
+            "temporal_resolution": "2 minutes",
+            "temporal_resolution_iso": "PT2M",
+            "n_samples": 62161,
+            "time_coverage_duration": "P86D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 33.878334,
+              "lat_max": 33.878334,
+              "lon_min": -69.747169,
+              "lon_max": -69.747169
+            },
+            "latitude": 33.878334,
+            "longitude": -69.747169
+          },
+          "depth": {
+            "min": 5,
+            "max": 500,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              5,
+              10,
+              15,
+              20,
+              50,
+              150,
+              300,
+              500
+            ],
+            "n_levels": 8
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            }
+          ],
+          "creator": {
+            "name": "Nan Galbraith",
+            "email": null,
+            "url": null,
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Galbraith, N. (1994). Acoustic Surface Reverberation Experiment 1993 [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-asrex93vel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:06:36Z",
+          "file": {
+            "name": "asrex93vel.nc",
+            "relative_path": "processed_uop_netcdfs/ASREX93/netCDF/asrex93vel.nc",
+            "format": "NetCDF",
+            "size_bytes": 4506479,
+            "sha256": "dd06f1d0d535833694d1505c648ddfda5e5b830fb43c6fd2cb4fc63218156a73"
+          },
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "arabian_sea",
+      "acronym": null,
+      "title": "Arabian Sea mixed layer dynamics experiment",
+      "status": "archived",
+      "summary": "The Arabian Sea Experiment, funded by the Office Of Naval Research, took place near the climatological mean axis of the Findlater Jet in the Arabian Sea. A moored array was deployed in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons. The Upper Ocean Processes Group maintained a surface mooring at the site for one year. The nominal water depth was 4030 m.",
+      "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+      "location": {
+        "bbox": {
+          "lat_min": 15.5,
+          "lat_max": 15.5,
+          "lon_min": 61.5,
+          "lon_max": 61.5
+        },
+        "latitude": 15.5,
+        "longitude": 61.5,
+        "points": [
+          {
+            "latitude": 15.5,
+            "longitude": 61.5
+          }
+        ]
+      },
+      "time_start": "1994-10-15T23:44:59Z",
+      "time_end": "1995-10-20T01:30:00Z",
+      "keywords": [
+        "OCEANOGRAPHY: PHYSICAL > Air/sea interactions",
+        "ATMOSPHERIC COMPOSITION AND STRUCTURE > Air/sea constituent fluxes",
+        "OCEANOGRAPHY: GENERAL > Marine meteorology",
+        "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+        "EARTH SCIENCE > Oceans > Salinity/Density",
+        "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature",
+        "OCEANOGRAPHY: PHYSICAL > Currents"
+      ],
+      "creators": [
+        "Robert Weller"
+      ],
+      "institutions": [
+        "Woods Hole Oceanographic Institution"
+      ],
+      "publishers": [
+        "Upper Ocean Processes Group"
+      ],
+      "licenses": [
+        "CC BY-NC 4.0"
+      ],
+      "n_datasets": 5,
+      "links": [],
+      "datasets": [
+        {
+          "id": "arabianseaflux_1hr",
+          "naming_authority": null,
+          "title": "Surface fluxes from a mooring deployed near the Findlater Jet in the Arabian Sea",
+          "summary": "Surface fluxe data from a surface mooring deployed near the climatological mean axis of the Findlater Jet in the Arabian Sea. A moored array was deployed in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanographic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Air/sea interactions",
+            "ATMOSPHERIC COMPOSITION AND STRUCTURE > Air/sea constituent fluxes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+          "time_start": "1994-10-16T00:37:30Z",
+          "time_end": "1995-10-19T22:37:30Z",
+          "granularity": {
+            "temporal_resolution": "1 hour",
+            "temporal_resolution_iso": "PT1H",
+            "n_samples": 8855,
+            "time_coverage_duration": "P368D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 15.5,
+              "lat_max": 15.5,
+              "lon_min": 61.5,
+              "lon_max": 61.5
+            },
+            "latitude": 15.5,
+            "longitude": 61.5
+          },
+          "depth": {
+            "min": 0,
+            "max": 0,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0
+            ],
+            "n_levels": 1
+          },
+          "variables": [
+            "sensible heat flux",
+            "latent heat flux",
+            "net shortwave flux",
+            "net longwave flux",
+            "net heat flux",
+            "eastward wind stress",
+            "northward wind stress",
+            "wind stress magnitude",
+            "wind stress direction",
+            "wind speed adjusted to 10m",
+            "specific humidity adjusted to 2m",
+            "air temperature adjusted to 2m",
+            "sea temperature adjusted to skin"
+          ],
+          "variable_details": [
+            {
+              "code": "QB",
+              "long_name": "sensible heat flux",
+              "standard_name": "surface_downward_sensible_heat_flux",
+              "units": "W m-2"
+            },
+            {
+              "code": "QH",
+              "long_name": "latent heat flux",
+              "standard_name": "surface_downward_latent_heat_flux",
+              "units": "W m-2"
+            },
+            {
+              "code": "QS",
+              "long_name": "net shortwave flux",
+              "standard_name": "surface_net_downward_shortwave_flux",
+              "units": "W m-2"
+            },
+            {
+              "code": "QL",
+              "long_name": "net longwave flux",
+              "standard_name": "surface_net_downward_longwave_flux",
+              "units": "W m-2"
+            },
+            {
+              "code": "QN",
+              "long_name": "net heat flux",
+              "standard_name": "surface_downward_heat_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "TAUE",
+              "long_name": "eastward wind stress",
+              "standard_name": "surface_downward_eastward_stress",
+              "units": "N m-2"
+            },
+            {
+              "code": "TAUN",
+              "long_name": "northward wind stress",
+              "standard_name": "surface_downward_northward_stress",
+              "units": "N m-2"
+            },
+            {
+              "code": "TAUMAG",
+              "long_name": "wind stress magnitude",
+              "standard_name": "magnitude_of_surface_downward_stress",
+              "units": "N m-2"
+            },
+            {
+              "code": "TAUDIR",
+              "long_name": "wind stress direction",
+              "standard_name": "to_direction_of_surface_downward_stress",
+              "units": "degree"
+            },
+            {
+              "code": "WS_H",
+              "long_name": "wind speed adjusted to 10m",
+              "standard_name": "wind_speed",
+              "units": "m s-1"
+            },
+            {
+              "code": "QQ_H",
+              "long_name": "specific humidity adjusted to 2m",
+              "standard_name": "specific_humidity",
+              "units": "g kg-1"
+            },
+            {
+              "code": "TA_H",
+              "long_name": "air temperature adjusted to 2m",
+              "standard_name": "air_temperature",
+              "units": "degree_C"
+            },
+            {
+              "code": "TSKIN",
+              "long_name": "sea temperature adjusted to skin",
+              "standard_name": "sea_surface_skin_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Robert Weller",
+            "email": "rweller@whoi.edu",
+            "url": "https://www.whoi.edu/profile/rweller",
+            "institution": null
+          },
+          "publisher": null,
+          "institution": null,
+          "license": null,
+          "citation": "Weller, R. (1995). Arabian Sea Experiment Meteorology [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-arabianseaflux_1hr_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": null,
+          "record_updated": "2026-11-05T21:29:59Z",
+          "file": {
+            "name": "arabianseaflux_1hr.nc",
+            "relative_path": "processed_uop_netcdfs/Arabian Sea/netCDF/arabianseaflux_1hr.nc",
+            "format": "NetCDF",
+            "size_bytes": 594230,
+            "sha256": "1e765b609c618891c5783765dfbb83fe3eb665520dd40b829b2f047fe84ec290"
+          },
+          "links": []
+        },
+        {
+          "id": "arabianseamet",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Surface meteorology data from a surface mooring deployed near the Findlater Jet in the Arabian Sea",
+          "summary": "Meteorological data from vector averaging wind recorder (VAWR) and improved met system (IMET) instruments on a surface mooring deployed from October 1994 to October 1995. A moored array was deployed near the climatological mean axis of the Findlater Het in the Arabian Sea in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanographic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: GENERAL > Marine meteorology",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+          "time_start": "1994-10-16T00:11:15Z",
+          "time_end": "1995-10-19T23:48:45Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 70846,
+            "time_coverage_duration": "P368D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 15.5,
+              "lat_max": 15.5,
+              "lon_min": 61.5,
+              "lon_max": 61.5
+            },
+            "latitude": 15.5,
+            "longitude": 61.5
+          },
+          "depth": {
+            "min": 0,
+            "max": 0,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0
+            ],
+            "n_levels": 1
+          },
+          "variables": [
+            "air temperature",
+            "relative humidity",
+            "barometric pressure",
+            "surface downwelling longwave radiation",
+            "shortwave radiation",
+            "precipitation rate",
+            "eastward wind velocity",
+            "northward wind velocity",
+            "sea temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "AIRT",
+              "long_name": "air temperature",
+              "standard_name": "air_temperature",
+              "units": "degree_C"
+            },
+            {
+              "code": "RELH",
+              "long_name": "relative humidity",
+              "standard_name": "relative_humidity",
+              "units": "%"
+            },
+            {
+              "code": "ATMS",
+              "long_name": "barometric pressure",
+              "standard_name": "air_pressure",
+              "units": "mbar"
+            },
+            {
+              "code": "LW",
+              "long_name": "surface downwelling longwave radiation",
+              "standard_name": "surface_downwelling_longwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "SW",
+              "long_name": "shortwave radiation",
+              "standard_name": "surface_downwelling_shortwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "RAIN",
+              "long_name": "precipitation rate",
+              "standard_name": "rainfall_rate",
+              "units": "mm h-1"
+            },
+            {
+              "code": "UWND",
+              "long_name": "eastward wind velocity",
+              "standard_name": "eastward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "VWND",
+              "long_name": "northward wind velocity",
+              "standard_name": "northward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "TEMP",
+              "long_name": "sea temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Robert Weller",
+            "email": "rweller@whoi.edu",
+            "url": "https://www.whoi.edu/profile/rweller",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Weller, R. (1995). Arabian Sea Experiment Meteorology [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-arabianseamet_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-05T21:29:41Z",
+          "file": {
+            "name": "arabianseamet.nc",
+            "relative_path": "processed_uop_netcdfs/Arabian Sea/netCDF/arabianseamet.nc",
+            "format": "NetCDF",
+            "size_bytes": 3170712,
+            "sha256": "f622e936ca45d11bc7f08ecd21fd8a2707c9b10a826cbe2c824f4cf7048175ee"
+          },
+          "links": []
+        },
+        {
+          "id": "arabianseasal",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Salinity data from a mooring deployed near the Findlater Jet in the Arabian Sea",
+          "summary": "Salinity data from Seabird SeaCAT SBE16 sensors installed from 1.4m to 250m on a mooring near the climatological mean axis of the Findlater Jet in the Arabian Sea. A moored array was deployed in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanographic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Salinity/Density"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+          "time_start": "1994-10-16T00:00:00Z",
+          "time_end": "1995-10-20T01:30:00Z",
+          "granularity": {
+            "temporal_resolution": "15 minutes",
+            "temporal_resolution_iso": "PT15M",
+            "n_samples": 35431,
+            "time_coverage_duration": "P369D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 15.5,
+              "lat_max": 15.5,
+              "lon_min": 61.5,
+              "lon_max": 61.5
+            },
+            "latitude": 15.5,
+            "longitude": 61.5
+          },
+          "depth": {
+            "min": 1.42,
+            "max": 250,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1.42,
+              10,
+              35,
+              65,
+              80,
+              100,
+              150,
+              200,
+              250
+            ],
+            "n_levels": 9
+          },
+          "variables": [
+            "sea water practical salinity"
+          ],
+          "variable_details": [
+            {
+              "code": "PSAL",
+              "long_name": "sea water practical salinity",
+              "standard_name": "sea_water_practical_salinity",
+              "units": "1"
+            }
+          ],
+          "creator": {
+            "name": "Robert Weller",
+            "email": "rweller@whoi.edu",
+            "url": "https://www.whoi.edu/profile/rweller",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Weller, R. (1995). Arabian Sea Experiment Meteorology [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-arabianseasal_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-05T21:29:07Z",
+          "file": {
+            "name": "arabianseasal.nc",
+            "relative_path": "processed_uop_netcdfs/Arabian Sea/netCDF/arabianseasal.nc",
+            "format": "NetCDF",
+            "size_bytes": 1586779,
+            "sha256": "1db4ec054b257d2ec692cac6d7d9445d3bdda02bd1bad8aa8848e96572514084"
+          },
+          "links": []
+        },
+        {
+          "id": "arabianseatemp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from a mooring deployed near the Findlater Jet in the Arabian Sea",
+          "summary": "Temperature data from multiple types of subsurface temperature sensors installed from 0.17m to 300m on a mooring near the climatological mean axis of the Findlater Jet in the Arabian Sea. A moored array was deployed in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanographic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+          "time_start": "1994-10-15T23:44:59Z",
+          "time_end": "1995-10-20T01:30:00Z",
+          "granularity": {
+            "temporal_resolution": "15 minutes",
+            "temporal_resolution_iso": "PT900S",
+            "n_samples": 35432,
+            "time_coverage_duration": "P369D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 15.5,
+              "lat_max": 15.5,
+              "lon_min": 61.5,
+              "lon_max": 61.5
+            },
+            "latitude": 15.5,
+            "longitude": 61.5
+          },
+          "depth": {
+            "min": 0.17,
+            "max": 300,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0.17,
+              0.43,
+              0.92,
+              1.37,
+              1.41,
+              1.8,
+              1.91,
+              2.4,
+              3.5,
+              4.5,
+              5,
+              10,
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              72,
+              80,
+              90,
+              100,
+              125,
+              150,
+              175,
+              200,
+              225,
+              250,
+              300
+            ],
+            "n_levels": 34
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Robert Weller",
+            "email": "rweller@whoi.edu",
+            "url": "https://www.whoi.edu/profile/rweller",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Weller, R. (1995). Arabian Sea Experiment Meteorology [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-arabianseatemp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-05T21:28:18Z",
+          "file": {
+            "name": "arabianseatemp.nc",
+            "relative_path": "processed_uop_netcdfs/Arabian Sea/netCDF/arabianseatemp.nc",
+            "format": "NetCDF",
+            "size_bytes": 5131047,
+            "sha256": "1bf9e71c4189057a2827ad34fe4b0bcd4a3305382192f31ee1a9b7e213424873"
+          },
+          "links": []
+        },
+        {
+          "id": "arabianseavel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from a mooring deployed near the Findlater Jet in the Arabian Sea",
+          "summary": "Velocity data from vector measuring current meters (VMCMs) installed from 5 to 750m on a mooring near the climatological mean axis of the Findlater Jet in the Arabian Sea. A moored array was deployed in order to improve understanding of air-sea interaction in the region, and in particular to investigate the oceanographic response to the strong, large-scale atmospheric forcing associated with the summer and winter monsoons",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "Near the climatological mean axis of the Findlater Jet in the Arabian Sea",
+          "time_start": "1994-10-15T23:44:59Z",
+          "time_end": "1995-10-20T01:15:00Z",
+          "granularity": {
+            "temporal_resolution": "15 minutes",
+            "temporal_resolution_iso": "PT15M",
+            "n_samples": 35431,
+            "time_coverage_duration": "P369D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 15.5,
+              "lat_max": 15.5,
+              "lon_min": 61.5,
+              "lon_max": 61.5
+            },
+            "latitude": 15.5,
+            "longitude": 61.5
+          },
+          "depth": {
+            "min": 5,
+            "max": 749.5,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              5,
+              10,
+              15,
+              25,
+              35,
+              45,
+              55,
+              65,
+              80,
+              301.2,
+              492,
+              749.5
+            ],
+            "n_levels": 12
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            }
+          ],
+          "creator": {
+            "name": "Robert Weller",
+            "email": "rweller@whoi.edu",
+            "url": "https://www.whoi.edu/profile/rweller",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Weller, R. (1995). Arabian Sea Experiment Meteorology [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-arabianseavel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:05:54Z",
+          "file": {
+            "name": "arabianseavel.nc",
+            "relative_path": "processed_uop_netcdfs/Arabian Sea/netCDF/arabianseavel.nc",
+            "format": "NetCDF",
+            "size_bytes": 3716223,
+            "sha256": "02a49d95bb2e0be8240d21549ab0cd1dd236c180a1b450ce078120ba16524723"
+          },
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "cmo",
+      "acronym": "CMO",
+      "title": "Coastal Mixing and Optics Experiment (CMO)",
+      "status": "archived",
+      "summary": "The Coastal Mixing and Optics Experiment (CMO), funded by the Office Of Naval Research, took place over the New England continental shelf about 100 km south of Cape Cod, Massachusetts. The Upper Ocean Processes Group deployed a moored array with the objective of identifying and understanding the vertical mixing processes which control stratification on broad continental shelves.",
+      "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+      "location": {
+        "bbox": {
+          "lat_min": 40.383499,
+          "lat_max": 40.583332,
+          "lon_min": -70.541832,
+          "lon_max": -70.333336
+        },
+        "points": [
+          {
+            "latitude": 40.474998,
+            "longitude": -70.333336
+          },
+          {
+            "latitude": 40.5,
+            "longitude": -70.5
+          },
+          {
+            "latitude": 40.491001,
+            "longitude": -70.503998
+          },
+          {
+            "latitude": 40.583332,
+            "longitude": -70.458336
+          },
+          {
+            "latitude": 40.383499,
+            "longitude": -70.541832
+          }
+        ]
+      },
+      "time_start": "1996-07-30T15:15:00Z",
+      "time_end": "1997-06-16T10:52:30Z",
+      "keywords": [
+        "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+        "EARTH SCIENCE > Oceans > Salinity/Density",
+        "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature",
+        "OCEANOGRAPHY: PHYSICAL > Currents",
+        "OCEANOGRAPHY: GENERAL > Marine meteorology"
+      ],
+      "creators": [
+        "Al Plueddemann"
+      ],
+      "institutions": [
+        "Woods Hole Oceanographic Institution"
+      ],
+      "publishers": [
+        "Upper Ocean Processes Group"
+      ],
+      "licenses": [
+        "CC BY-NC 4.0"
+      ],
+      "n_datasets": 13,
+      "links": [],
+      "datasets": [
+        {
+          "id": "cmoalongsal",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Salinity data from the CMO Alongshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Salinity data from 6 Seabird SBE16 Seacat sensors from 2m to 70m on the CMO Alongshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Salinity/Density"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-03T21:07:29Z",
+          "time_end": "1997-06-10T09:52:30Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 59622,
+            "time_coverage_duration": "P310D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.474998,
+              "lat_max": 40.474998,
+              "lon_min": -70.333336,
+              "lon_max": -70.333336
+            },
+            "latitude": 40.474998,
+            "longitude": -70.333336
+          },
+          "depth": {
+            "min": 2,
+            "max": 70,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              2,
+              20,
+              40.5,
+              60.5,
+              67.5,
+              70
+            ],
+            "n_levels": 6
+          },
+          "variables": [
+            "sea water practical salinity",
+            "potential density (sigma-theta)"
+          ],
+          "variable_details": [
+            {
+              "code": "PSAL",
+              "long_name": "sea water practical salinity",
+              "standard_name": "sea_water_practical_salinity",
+              "units": "1"
+            },
+            {
+              "code": "SIGMA-THETA",
+              "long_name": "potential density (sigma-theta)",
+              "standard_name": "sea_water_sigma_theta",
+              "units": "kg m-3"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoalongsal_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T20:21:30Z",
+          "file": {
+            "name": "cmoalongsal.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoalongsal.nc",
+            "format": "NetCDF",
+            "size_bytes": 3370743,
+            "sha256": "a4a9a6c806cdbe4d75be4b1d5babba7b4176b6e3ada670c1721c62e56e12fd75"
+          },
+          "links": []
+        },
+        {
+          "id": "cmoalongtemp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from the CMO Alongshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Temperature data from multiple subsurface instruments from 1m to 70m on the CMO Alongshore buoy deployed over the New England continental shelf about south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-03T21:30:00Z",
+          "time_end": "1997-06-10T09:37:30Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 59618,
+            "time_coverage_duration": "P310D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.5,
+              "lat_max": 40.5,
+              "lon_min": -70.5,
+              "lon_max": -70.5
+            },
+            "latitude": 40.5,
+            "longitude": -70.5
+          },
+          "depth": {
+            "min": 1,
+            "max": 70,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1,
+              2,
+              4.55,
+              10,
+              15,
+              20,
+              25,
+              40.5,
+              50,
+              55.5,
+              60.5,
+              65,
+              67.5,
+              70
+            ],
+            "n_levels": 14
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoalongtemp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-03T21:34:34Z",
+          "file": {
+            "name": "cmoalongtemp.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoalongtemp.nc",
+            "format": "NetCDF",
+            "size_bytes": 3844391,
+            "sha256": "17cfd4c2a4d22db2d9e86204d6e3dde5c8f0c3eb3832da0de2167645bdc1c963"
+          },
+          "links": []
+        },
+        {
+          "id": "cmoalongvel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from the CMO Alongshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Velocity data from 4 vector measuring current meter (VMCM) instruments from 4.55m to 65m on the CMO Alongshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-03T21:29:59Z",
+          "time_end": "1997-06-10T09:52:30Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 59620,
+            "time_coverage_duration": "P310D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.5,
+              "lat_max": 40.5,
+              "lon_min": -70.5,
+              "lon_max": -70.5
+            },
+            "latitude": 40.5,
+            "longitude": -70.5
+          },
+          "depth": {
+            "min": 4.55,
+            "max": 65,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              4.55,
+              15,
+              50,
+              65
+            ],
+            "n_levels": 4
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity",
+            "sea water speed",
+            "direction of sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CSPD",
+              "long_name": "sea water speed",
+              "standard_name": "sea_water_speed",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CDIR",
+              "long_name": "direction of sea water velocity",
+              "standard_name": "direction_of_sea_water_velocity",
+              "units": "degrees"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoalongvel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:06:56Z",
+          "file": {
+            "name": "cmoalongvel.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoalongvel.nc",
+            "format": "NetCDF",
+            "size_bytes": 4329727,
+            "sha256": "0950312383182fa481e645ae3692b309ac91105513b1677da9dc21f9374fef1a"
+          },
+          "links": []
+        },
+        {
+          "id": "cmocentmet",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Surface meteorological data from the CMO central buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Meteorological data from a vector averging wind recorder (VAWR) instrument on the CMO central buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: GENERAL > Marine meteorology",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-30T15:15:00Z",
+          "time_end": "1997-06-13T14:00:00Z",
+          "granularity": {
+            "temporal_resolution": "15 minutes",
+            "temporal_resolution_iso": "PT900S",
+            "n_samples": 30524,
+            "time_coverage_duration": "P317D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.491001,
+              "lat_max": 40.491001,
+              "lon_min": -70.503998,
+              "lon_max": -70.503998
+            },
+            "latitude": 40.491001,
+            "longitude": -70.503998
+          },
+          "depth": {
+            "min": 0,
+            "max": 0,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              0
+            ],
+            "n_levels": 1
+          },
+          "variables": [
+            "air temperature",
+            "relative humidity",
+            "barometric pressure",
+            "surface downwelling longwave radiation",
+            "shortwave radiation",
+            "precipitation rate",
+            "eastward wind velocity",
+            "northward wind velocity",
+            "sea temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "AIRT",
+              "long_name": "air temperature",
+              "standard_name": "air_temperature",
+              "units": "degree_C"
+            },
+            {
+              "code": "RELH",
+              "long_name": "relative humidity",
+              "standard_name": "relative_humidity",
+              "units": "%"
+            },
+            {
+              "code": "ATMS",
+              "long_name": "barometric pressure",
+              "standard_name": "air_pressure",
+              "units": "mbar"
+            },
+            {
+              "code": "LW",
+              "long_name": "surface downwelling longwave radiation",
+              "standard_name": "surface_downwelling_longwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "SW",
+              "long_name": "shortwave radiation",
+              "standard_name": "surface_downwelling_shortwave_flux_in_air",
+              "units": "W m-2"
+            },
+            {
+              "code": "RAIN",
+              "long_name": "precipitation rate",
+              "standard_name": "rainfall_rate",
+              "units": "mm h-1"
+            },
+            {
+              "code": "UWND",
+              "long_name": "eastward wind velocity",
+              "standard_name": "eastward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "VWND",
+              "long_name": "northward wind velocity",
+              "standard_name": "northward_wind",
+              "units": "m s-1"
+            },
+            {
+              "code": "TEMP",
+              "long_name": "sea temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmocentmet_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-03T21:31:46Z",
+          "file": {
+            "name": "cmocentmet.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmocentmet.nc",
+            "format": "NetCDF",
+            "size_bytes": 1395520,
+            "sha256": "a41779663383b54bd89e7f4797f3568824c10e4746d9e44e07d08567aa654cda"
+          },
+          "links": []
+        },
+        {
+          "id": "cmocentsal",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Salinity data from the CMO Central buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Salinity data from 6 Seabird SBE16 Seacat sensors from 2m to 70m on the CMO Alongshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Salinity/Density"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-30T19:07:30Z",
+          "time_end": "1997-06-12T18:30:00Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 60860,
+            "time_coverage_duration": "P316D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.491001,
+              "lat_max": 40.491001,
+              "lon_min": -70.503998,
+              "lon_max": -70.503998
+            },
+            "latitude": 40.491001,
+            "longitude": -70.503998
+          },
+          "depth": {
+            "min": 2,
+            "max": 67.5,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              2,
+              7.5,
+              12.5,
+              25,
+              35,
+              45,
+              57.5,
+              62.5,
+              67.5
+            ],
+            "n_levels": 9
+          },
+          "variables": [
+            "sea water practical salinity",
+            "potential density (sigma-theta)"
+          ],
+          "variable_details": [
+            {
+              "code": "PSAL",
+              "long_name": "sea water practical salinity",
+              "standard_name": "sea_water_practical_salinity",
+              "units": "1"
+            },
+            {
+              "code": "SIGMA-THETA",
+              "long_name": "potential density (sigma-theta)",
+              "standard_name": "sea_water_sigma_theta",
+              "units": "kg m-3"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmocentsal_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T20:19:37Z",
+          "file": {
+            "name": "cmocentsal.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmocentsal.nc",
+            "format": "NetCDF",
+            "size_bytes": 4900711,
+            "sha256": "e177b381c97b62bcaec66cb37b4904365e2ac97cd4bb7f49c62109a80f0c978f"
+          },
+          "links": []
+        },
+        {
+          "id": "cmocenttemp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from the CMO Central buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Temperature data from multiple subsurface instruments from 1.5m to 67.5m on the CMO Central buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-30T19:07:30Z",
+          "time_end": "1997-06-12T18:22:30Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 60859,
+            "time_coverage_duration": "P316D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.491001,
+              "lat_max": 40.491001,
+              "lon_min": -70.503998,
+              "lon_max": -70.503998
+            },
+            "latitude": 40.491001,
+            "longitude": -70.503998
+          },
+          "depth": {
+            "min": 1.5,
+            "max": 67.5,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1.5,
+              2,
+              4.05,
+              4.55,
+              7.5,
+              10,
+              12.5,
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              57.5,
+              60,
+              62.5,
+              65,
+              67.5
+            ],
+            "n_levels": 21
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmocenttemp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-03T21:35:26Z",
+          "file": {
+            "name": "cmocenttemp.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmocenttemp.nc",
+            "format": "NetCDF",
+            "size_bytes": 5628891,
+            "sha256": "243056fdebab22259b049e1dea02a55abd357c6fa4851a2e065cb9eabd00466d"
+          },
+          "links": []
+        },
+        {
+          "id": "cmocentvel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from the CMO Central buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Velocity data from 10 vector measuring current meter (VMCM) instruments from 4.55m to 65m on the CMO Central buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-30T19:07:30Z",
+          "time_end": "1997-06-12T18:30:00Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 60860,
+            "time_coverage_duration": "P316D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.491001,
+              "lat_max": 40.491001,
+              "lon_min": -70.503998,
+              "lon_max": -70.503998
+            },
+            "latitude": 40.491001,
+            "longitude": -70.503998
+          },
+          "depth": {
+            "min": 4.55,
+            "max": 65,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              4.55,
+              10,
+              15,
+              20,
+              30,
+              40,
+              50,
+              55,
+              60,
+              65
+            ],
+            "n_levels": 10
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity",
+            "sea water speed",
+            "direction of sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CSPD",
+              "long_name": "sea water speed",
+              "standard_name": "sea_water_speed",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CDIR",
+              "long_name": "direction of sea water velocity",
+              "standard_name": "direction_of_sea_water_velocity",
+              "units": "degrees"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmocentvel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:16:02Z",
+          "file": {
+            "name": "cmocentvel.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmocentvel.nc",
+            "format": "NetCDF",
+            "size_bytes": 10261567,
+            "sha256": "78b2e98bd8ad4cb8e2625386b322f0247bd90dc85d45b210edd334fed350f411"
+          },
+          "links": []
+        },
+        {
+          "id": "cmoinsal",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Salinity data from the CMO Inshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Salinity data from 5 Seabird SBE16 Seacat sensors from 2m to 62m on the CMO Inshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Salinity/Density"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-02T19:22:30Z",
+          "time_end": "1997-06-12T09:22:30Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 60209,
+            "time_coverage_duration": "P313D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.583332,
+              "lat_max": 40.583332,
+              "lon_min": -70.458336,
+              "lon_max": -70.458336
+            },
+            "latitude": 40.583332,
+            "longitude": -70.458336
+          },
+          "depth": {
+            "min": 2,
+            "max": 62,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              2,
+              20,
+              52.5,
+              59,
+              62
+            ],
+            "n_levels": 5
+          },
+          "variables": [
+            "sea water practical salinity",
+            "potential density (sigma-theta)"
+          ],
+          "variable_details": [
+            {
+              "code": "PSAL",
+              "long_name": "sea water practical salinity",
+              "standard_name": "sea_water_practical_salinity",
+              "units": "1"
+            },
+            {
+              "code": "SIGMA-THETA",
+              "long_name": "potential density (sigma-theta)",
+              "standard_name": "sea_water_sigma_theta",
+              "units": "kg m-3"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoinsal_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T20:20:25Z",
+          "file": {
+            "name": "cmoinsal.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoinsal.nc",
+            "format": "NetCDF",
+            "size_bytes": 2920919,
+            "sha256": "d65c80b0055a765f52efb078bc4bb30cb3d4dcb3012f622a5955ffa037ef3f4a"
+          },
+          "links": []
+        },
+        {
+          "id": "cmointemp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from the CMO Inshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Temperature data from multiple subsurface instruments from 1m to 62m on the CMO Inshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-02T19:22:30Z",
+          "time_end": "1997-06-12T09:15:00Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 60208,
+            "time_coverage_duration": "P313D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.583332,
+              "lat_max": 40.583332,
+              "lon_min": -70.458336,
+              "lon_max": -70.458336
+            },
+            "latitude": 40.583332,
+            "longitude": -70.458336
+          },
+          "depth": {
+            "min": 1,
+            "max": 62,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1,
+              2,
+              4.55,
+              10,
+              15,
+              20,
+              25,
+              30,
+              42,
+              47.5,
+              52.5,
+              57,
+              59,
+              62
+            ],
+            "n_levels": 14
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmointemp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-03T21:34:49Z",
+          "file": {
+            "name": "cmointemp.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmointemp.nc",
+            "format": "NetCDF",
+            "size_bytes": 3882151,
+            "sha256": "de796139320da1dde43125aab2d9c022bbae8e64472b19c7ab05507651e27270"
+          },
+          "links": []
+        },
+        {
+          "id": "cmoinvel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from the CMO Inshore buoy that was deployed south of Cape Cod, Masscahusetts, August 1996.",
+          "summary": "Velocity data from 5 vector measuring current meter (VMCM) instruments from 4.55m to 57m on the CMO Inshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from August 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-08-02T19:22:30Z",
+          "time_end": "1997-06-12T09:30:00Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 60210,
+            "time_coverage_duration": "P313D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.583332,
+              "lat_max": 40.583332,
+              "lon_min": -70.458336,
+              "lon_max": -70.458336
+            },
+            "latitude": 40.583332,
+            "longitude": -70.458336
+          },
+          "depth": {
+            "min": 4.55,
+            "max": 57,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              4.55,
+              15,
+              30,
+              42,
+              57
+            ],
+            "n_levels": 5
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity",
+            "sea water speed",
+            "direction of sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CSPD",
+              "long_name": "sea water speed",
+              "standard_name": "sea_water_speed",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CDIR",
+              "long_name": "direction of sea water velocity",
+              "standard_name": "direction_of_sea_water_velocity",
+              "units": "degrees"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoinvel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T19:07:34Z",
+          "file": {
+            "name": "cmoinvel.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoinvel.nc",
+            "format": "NetCDF",
+            "size_bytes": 5335567,
+            "sha256": "80bae41be7835d78dee74017bf0522e74c8002bb3ec9941369fad2a10b7e1fcf"
+          },
+          "links": []
+        },
+        {
+          "id": "cmooffsal",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Salinity data from the CMO Offshore buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Salinity data from 7 Seabird SBE16 Seacat sensors from 2m to 84m on the CMO Offshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Salinity/Density"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-31T19:59:59Z",
+          "time_end": "1997-06-16T10:52:30Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 61368,
+            "time_coverage_duration": "P319D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.383499,
+              "lat_max": 40.383499,
+              "lon_min": -70.541832,
+              "lon_max": -70.541832
+            },
+            "latitude": 40.383499,
+            "longitude": -70.541832
+          },
+          "depth": {
+            "min": 2,
+            "max": 84,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              2,
+              20,
+              35,
+              50.5,
+              74.5,
+              81.5,
+              84
+            ],
+            "n_levels": 7
+          },
+          "variables": [
+            "sea water practical salinity",
+            "potential density (sigma-theta)"
+          ],
+          "variable_details": [
+            {
+              "code": "PSAL",
+              "long_name": "sea water practical salinity",
+              "standard_name": "sea_water_practical_salinity",
+              "units": "1"
+            },
+            {
+              "code": "SIGMA-THETA",
+              "long_name": "potential density (sigma-theta)",
+              "standard_name": "sea_water_sigma_theta",
+              "units": "kg m-3"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmooffsal_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-06T20:21:01Z",
+          "file": {
+            "name": "cmooffsal.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmooffsal.nc",
+            "format": "NetCDF",
+            "size_bytes": 3958439,
+            "sha256": "9506df06cb1573e818106eb33ca5b60cea34c7b61afc54c47d6280fe3189532e"
+          },
+          "links": []
+        },
+        {
+          "id": "cmoofftemp",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Temperature data from the CMO Offshore buoy that was deployed of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Temperature data from multiple subsurface instruments from 1m to 84m on the CMO Offshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes",
+            "EARTH SCIENCE > Oceans > Ocean Temperature > Water Temperature"
+          ],
+          "keywords_vocabulary": "AGU Index Terms",
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-31T19:59:59Z",
+          "time_end": "1997-06-16T10:37:30Z",
+          "granularity": {
+            "temporal_resolution": "7.5 minutes",
+            "temporal_resolution_iso": "PT450S",
+            "n_samples": 61366,
+            "time_coverage_duration": "P319D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.383499,
+              "lat_max": 40.383499,
+              "lon_min": -70.541832,
+              "lon_max": -70.541832
+            },
+            "latitude": 40.383499,
+            "longitude": -70.541832
+          },
+          "depth": {
+            "min": 1,
+            "max": 84,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              1,
+              2,
+              4.55,
+              10,
+              15,
+              20,
+              25,
+              30,
+              35,
+              50.5,
+              64,
+              69.5,
+              74.5,
+              79,
+              81.5,
+              84
+            ],
+            "n_levels": 16
+          },
+          "variables": [
+            "sea water temperature"
+          ],
+          "variable_details": [
+            {
+              "code": "TEMP",
+              "long_name": "sea water temperature",
+              "standard_name": "sea_water_temperature",
+              "units": "degree_C"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmoofftemp_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-03T21:35:07Z",
+          "file": {
+            "name": "cmoofftemp.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmoofftemp.nc",
+            "format": "NetCDF",
+            "size_bytes": 4447191,
+            "sha256": "1b8a40af7e39afe30f8daf4bc121ff50ce7cfe23ffa244524bab23f1e6fcce08"
+          },
+          "links": []
+        },
+        {
+          "id": "cmooffvel",
+          "naming_authority": "edu.whoi.uop",
+          "title": "Velocity data from the CMO Offshore buoy that was deployed south of Cape Cod, Masscahusetts, July 1996.",
+          "summary": "Velocity data from 5 vector measuring current meter (VMCM) instruments from 4.55m to 79m on the CMO Offshore buoy deployed over the New England continental shelf south of Cape Cod, Massachusetts from July 1996 to June 1997. The goal of this project was to use a moored array to capture the breakdown of the continental shelf's stratification in the fall and its re-development in spring to better understand the vertical mixing processes that control this stratification.",
+          "status": "archived",
+          "keywords": [
+            "OCEANOGRAPHY: PHYSICAL > Currents",
+            "OCEANOGRAPHY: PHYSICAL > Upper ocean and mixed layer processes"
+          ],
+          "keywords_vocabulary": null,
+          "region": "The New England continental shelf about 100 km south of Cape Cod, Massachusetts",
+          "time_start": "1996-07-31T19:59:59Z",
+          "time_end": "1997-06-16T10:52:30Z",
+          "granularity": {
+            "temporal_resolution": "7 minutes",
+            "temporal_resolution_iso": "PT7M",
+            "n_samples": 61368,
+            "time_coverage_duration": "P319D"
+          },
+          "location": {
+            "bbox": {
+              "lat_min": 40.383499,
+              "lat_max": 40.383499,
+              "lon_min": -70.541832,
+              "lon_max": -70.541832
+            },
+            "latitude": 40.383499,
+            "longitude": -70.541832
+          },
+          "depth": {
+            "min": 4.55,
+            "max": 79,
+            "units": "m",
+            "positive": "down",
+            "levels": [
+              4.55,
+              15,
+              30,
+              64,
+              79
+            ],
+            "n_levels": 5
+          },
+          "variables": [
+            "eastward sea water velocity",
+            "northward sea water velocity",
+            "sea water speed",
+            "direction of sea water velocity"
+          ],
+          "variable_details": [
+            {
+              "code": "UCUR",
+              "long_name": "eastward sea water velocity",
+              "standard_name": "eastward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "VCUR",
+              "long_name": "northward sea water velocity",
+              "standard_name": "northward_sea_water_velocity",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CSPD",
+              "long_name": "sea water speed",
+              "standard_name": "sea_water_speed",
+              "units": "cm s-1"
+            },
+            {
+              "code": "CDIR",
+              "long_name": "direction of sea water velocity",
+              "standard_name": "direction_of_sea_water_velocity",
+              "units": "degrees"
+            }
+          ],
+          "creator": {
+            "name": "Al Plueddemann",
+            "email": "aplueddemann@whoi.edu",
+            "url": "https://www.whoi.edu/profile/aplueddemann",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "publisher": {
+            "name": "Upper Ocean Processes Group",
+            "url": "https://uop.whoi.edu",
+            "institution": "Woods Hole Oceanographic Institution"
+          },
+          "institution": "Woods Hole Oceanographic Institution",
+          "license": "CC BY-NC 4.0",
+          "citation": "Plueddemann, A. (1997). Central Mixing and Optics Experiment [Data set]. Upper Ocean Processes Group, Woods Hole Oceanographic Institution. edu.whoi.uop-cmooffvel_nc. Accessed {user_supplied_access_date}",
+          "acknowledgement": "Support for this research was provided by the Office of Naval Research",
+          "conventions": "CF-1.9",
+          "standard_name_vocabulary": "CF Standard Name Table v93",
+          "record_updated": "2026-11-13T16:00:30Z",
+          "file": {
+            "name": "cmooffvel.nc",
+            "relative_path": "processed_uop_netcdfs/CMO/netCDF/cmooffvel.nc",
+            "format": "NetCDF",
+            "size_bytes": 5437471,
+            "sha256": "eaf7771b393b1fa051d56c425f8b06586e4ef7d1e0ee9d3839ae51d9e16d1010"
+          },
+          "links": []
+        }
+      ]
+    }
+  ]
+}
