@@ -17,7 +17,7 @@
     #uop-catalog .uc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     #uop-catalog [hidden] { display: none !important; }
 
-    #uop-catalog .uc-search input { width: 100%; padding: 11px 14px; font-size: 17px; border: 2px solid var(--line); border-radius: 8px; background: #fff; }
+    #uop-catalog .uc-search input { width: 100%; padding: 11px 14px; font-size: 17px; border: 2px solid var(--line); border-radius: 2px; background: #fff; }
     #uop-catalog .uc-search input:focus { border-color: var(--accent); outline: none; }
     #uop-catalog .uc-hint { margin: 6px 2px 0; font-size: 13px; color: var(--muted); }
 
@@ -25,7 +25,7 @@
     @media (max-width: 900px) { #uop-catalog .uc-layout { grid-template-columns: 1fr; } }
 
     /* ---- filters ---- */
-    #uop-catalog .uc-filters { background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+    #uop-catalog .uc-filters { background: var(--card); border: 1px solid var(--line); border-radius: 2px; }
     #uop-catalog .uc-filters > summary { cursor: pointer; padding: 11px 14px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; }
     #uop-catalog .uc-filters > summary::-webkit-details-marker { display: none; }
     #uop-catalog .uc-body { padding: 0 14px 12px; }
@@ -41,7 +41,7 @@
     #uop-catalog .uc-grp { border-top: 1px solid var(--line); }
     #uop-catalog .uc-grp > summary { cursor: pointer; padding: 5px 0; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; }
     #uop-catalog .uc-grp > summary .uc-n { font-weight: 400; color: var(--muted); font-size: 12.5px; }
-    #uop-catalog .uc-small { width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: 14px; }
+    #uop-catalog .uc-small { width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 2px; background: #fff; font-size: 14px; }
     #uop-catalog .uc-row { display: flex; gap: 6px; align-items: center; margin: 4px 0; }
     #uop-catalog .uc-row label { font-size: 13px; color: var(--muted); width: 48px; flex: none; }
     #uop-catalog .uc-row > span { font-size: 13px; color: var(--muted); }
@@ -49,14 +49,14 @@
     #uop-catalog .uc-sec > summary { cursor: pointer; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
     #uop-catalog .uc-help { font-size: 12.5px; color: var(--muted); margin: 3px 0 6px; }
     #uop-catalog .uc-link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; font-size: inherit; }
-    #uop-catalog .uc-btn-sm { padding: 5px 10px; border: 1px solid var(--line); background: #fff; border-radius: 6px; cursor: pointer; font-size: 13.5px; }
+    #uop-catalog .uc-btn-sm { padding: 5px 10px; border: 1px solid var(--line); background: #fff; border-radius: 2px; cursor: pointer; font-size: 13.5px; }
     #uop-catalog .uc-btn-sm:hover:not(:disabled), #uop-catalog .uc-btn-sm.uc-on { border-color: var(--accent); }
     #uop-catalog .uc-btn-sm.uc-on { background: var(--accent-soft); }
 
     /* ---- range sliders (time: horizontal, depth: vertical) ---- */
     #uop-catalog .uc-sl { position: relative; user-select: none; touch-action: none; }
-    #uop-catalog .uc-sl-track { position: absolute; background: var(--line); border-radius: 3px; }
-    #uop-catalog .uc-sl-band { position: absolute; background: var(--accent); border-radius: 3px; opacity: .85; }
+    #uop-catalog .uc-sl-track { position: absolute; background: var(--line); border-radius: 2px; }
+    #uop-catalog .uc-sl-band { position: absolute; background: var(--accent); border-radius: 2px; opacity: .85; }
     #uop-catalog .uc-sl.uc-sl-off .uc-sl-band { background: #9fb7c3; opacity: .6; }
     #uop-catalog .uc-sl-handle { position: absolute; width: 20px; height: 20px; margin: -7px 0 0 -7px; border-radius: 50%; border: 3px solid #fff; background: var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,.4); cursor: grab; padding: 0; touch-action: none; }
     #uop-catalog .uc-sl-handle:active { cursor: grabbing; }
@@ -82,41 +82,41 @@
     #uop-catalog .uc-sl-v .uc-sl-ticks span { right: 0; transform: translateY(-50%); }
 
     /* ---- visualisation panel ---- */
-    #uop-catalog .uc-viz { border: 1px solid var(--line); border-radius: 8px; background: #fff; margin-bottom: 12px; overflow: hidden; }
+    #uop-catalog .uc-viz { border: 1px solid var(--line); border-radius: 2px; background: #fff; margin-bottom: 12px; overflow: hidden; }
     #uop-catalog .uc-vizbar { display: flex; gap: 8px; align-items: center; padding: 8px 10px; flex-wrap: wrap; }
-    #uop-catalog .uc-seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    #uop-catalog .uc-seg { display: inline-flex; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
     #uop-catalog .uc-seg button { border: 0; background: #fff; padding: 6px 14px; cursor: pointer; }
     #uop-catalog .uc-seg button + button { border-left: 1px solid var(--line); }
     #uop-catalog .uc-seg button[aria-selected="true"] { background: var(--accent); color: #fff; font-weight: 600; }
     #uop-catalog .uc-spacer { flex: 1; }
-    #uop-catalog .uc-clearbtn { border: 1.5px solid #b4235a; background: #fff; color: #b4235a; border-radius: 6px; padding: 4px 10px; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    #uop-catalog .uc-clearbtn { border: 1.5px solid #b4235a; background: #fff; color: #b4235a; border-radius: 2px; padding: 4px 10px; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap; }
     #uop-catalog .uc-clearbtn:hover:not([aria-disabled="true"]) { background: #b4235a; color: #fff; }
     #uop-catalog .uc-clearbtn[aria-disabled="true"] { opacity: .4; cursor: default; }
     #uop-catalog .uc-filters > summary .uc-clearbtn { padding: 2px 8px; font-size: 12.5px; }
     #uop-catalog #uc-map { height: 310px; border-top: 1px solid var(--line); }
-    #uop-catalog #uc-chart { border-top: 1px solid var(--line); overflow-x: auto; }
-    #uop-catalog #uc-chart svg { display: block; width: 100%; height: auto; }
+    #uop-catalog #uc-chart { border-top: 1px solid var(--line); overflow-x: auto; overflow-y: auto; max-height: 460px; }
+    #uop-catalog #uc-chart svg { display: block; max-width: none; }
     #uop-catalog #uc-chart text { font: 11px system-ui, sans-serif; fill: #5d6c79; }
     #uop-catalog #uc-chart text.uc-ch-h { font-weight: 700; font-size: 12px; fill: #1b2a36; }
-    #uop-catalog .uc-hover { margin: 0; padding: 7px 12px; font-size: 13.5px; border-top: 1px solid var(--line); background: var(--faint); min-height: 36px; }
+    #uop-catalog .uc-hover { margin: 0; padding: 7px 12px; font-size: 13.5px; line-height: 20px; border-top: 1px solid var(--line); background: var(--faint); height: 56px; overflow: hidden; }
     #uop-catalog .uc-mapnote { padding: 20px; color: var(--muted); text-align: center; }
-    #uop-catalog .leaflet-popup-content button { margin-top: 6px; background: #0b6e8f; color: #fff; border: 0; border-radius: 5px; padding: 4px 9px; cursor: pointer; }
+    #uop-catalog .leaflet-popup-content button { margin-top: 6px; background: #0b6e8f; color: #fff; border: 0; border-radius: 2px; padding: 4px 9px; cursor: pointer; }
 
     /* ---- results ---- */
     #uop-catalog .uc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; align-items: center; }
-    #uop-catalog .uc-fchip { background: var(--accent-soft); border: 1px solid transparent; border-radius: 999px; padding: 2px 6px 2px 11px; font-size: 13.5px; cursor: pointer; }
+    #uop-catalog .uc-fchip { background: var(--accent-soft); border: 1px solid transparent; border-radius: 2px; padding: 2px 6px 2px 11px; font-size: 13.5px; cursor: pointer; }
     #uop-catalog .uc-fchip:hover { border-color: var(--accent); }
     #uop-catalog .uc-toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
-    #uop-catalog .uc-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    #uop-catalog .uc-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
     #uop-catalog .uc-tabs button { border: 0; background: #fff; padding: 6px 14px; cursor: pointer; }
     #uop-catalog .uc-tabs button[aria-selected="true"] { background: var(--accent); color: #fff; font-weight: 600; }
-    #uop-catalog .uc-toolbar select { padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+    #uop-catalog .uc-toolbar select { padding: 6px 8px; border: 1px solid var(--line); border-radius: 2px; background: #fff; }
     #uop-catalog .uc-count { color: var(--muted); font-size: 14px; margin: 0; }
-    #uop-catalog .uc-card { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--pc, var(--accent)); border-radius: 8px; padding: 12px 15px; margin-bottom: 10px; }
+    #uop-catalog .uc-card { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--pc, var(--accent)); border-radius: 2px; padding: 12px 15px; margin-bottom: 10px; }
     #uop-catalog .uc-card h3 { margin: 3px 0 8px; font-size: 17px; line-height: 1.3; }
     #uop-catalog .uc-ptag { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; font-weight: 700; background: none; border: 0; padding: 0; cursor: pointer; }
     #uop-catalog button.uc-ptag:hover { text-decoration: underline; }
-    #uop-catalog .uc-badge { font-size: 12px; background: var(--chip); color: var(--muted); border-radius: 999px; padding: 0 8px; margin-left: 6px; }
+    #uop-catalog .uc-badge { font-size: 12px; background: var(--chip); color: var(--muted); border-radius: 2px; padding: 0 8px; margin-left: 6px; }
     #uop-catalog .uc-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 16px; margin: 6px 0 8px; }
     #uop-catalog .uc-meta dt { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 700; }
     #uop-catalog .uc-meta dd { margin: 0; font-size: 14.5px; }
@@ -127,7 +127,7 @@
     #uop-catalog .uc-strip .uc-strip-tick { position: absolute; top: 0; height: 14px; width: 1px; background: #cdd7de; }
     #uop-catalog .uc-strip .uc-strip-lab { position: absolute; top: 14px; font-size: 10.5px; color: var(--muted); transform: translateX(-50%); }
     #uop-catalog .uc-vchips { display: flex; flex-wrap: wrap; gap: 5px; margin: 4px 0; align-items: center; }
-    #uop-catalog .uc-vchip { border: 1px solid var(--line); background: var(--chip); border-radius: 999px; padding: 1px 9px; font-size: 13px; cursor: pointer; }
+    #uop-catalog .uc-vchip { border: 1px solid var(--line); background: var(--chip); border-radius: 2px; padding: 1px 9px; font-size: 13px; cursor: pointer; }
     #uop-catalog .uc-vchip:hover { border-color: var(--accent); }
     #uop-catalog .uc-vchip.uc-on { background: var(--accent-soft); border-color: var(--accent); font-weight: 600; }
     #uop-catalog details.uc-more > summary { cursor: pointer; color: var(--accent); font-size: 14px; font-weight: 600; padding: 3px 0; }
@@ -137,16 +137,16 @@
     #uop-catalog .uc-vars th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
     #uop-catalog .uc-scroll { overflow-x: auto; }
     #uop-catalog .uc-kw { display: flex; flex-wrap: wrap; gap: 5px; margin: 5px 0; }
-    #uop-catalog .uc-kw span { font-size: 12.5px; background: var(--chip); border-radius: 5px; padding: 1px 7px; color: var(--muted); }
+    #uop-catalog .uc-kw span { font-size: 12.5px; background: var(--chip); border-radius: 2px; padding: 1px 7px; color: var(--muted); }
     #uop-catalog .uc-fileline { font-size: 13.5px; color: var(--muted); margin: 4px 0; }
     #uop-catalog .uc-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
-    #uop-catalog .uc-btn { display: inline-block; text-decoration: none; background: var(--accent); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 14px; font-weight: 600; border: 0; cursor: pointer; }
+    #uop-catalog .uc-btn { display: inline-block; text-decoration: none; background: var(--accent); color: #fff; padding: 5px 12px; border-radius: 2px; font-size: 14px; font-weight: 600; border: 0; cursor: pointer; }
     #uop-catalog .uc-btn.uc-ghost { background: #fff; color: var(--accent); border: 1px solid var(--accent); }
     #uop-catalog .uc-clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 4px 0; }
     #uop-catalog .uc-clamp.uc-open { display: block; }
-    #uop-catalog .uc-empty { background: var(--card); border: 1px dashed var(--line); border-radius: 8px; padding: 22px; color: var(--muted); }
+    #uop-catalog .uc-empty { background: var(--card); border: 1px dashed var(--line); border-radius: 2px; padding: 22px; color: var(--muted); }
     #uop-catalog .uc-empty ul { margin: 8px 0 0; padding-left: 18px; }
-    #uop-catalog .uc-err { background: #fff4d6; color: #7a5200; padding: 14px; border-radius: 8px; margin-top: 12px; }
+    #uop-catalog .uc-err { background: #fff4d6; color: #7a5200; padding: 14px; border-radius: 2px; margin-top: 12px; }
   </style>
 </head>
 <body>
@@ -193,12 +193,14 @@
           <div class="uc-vizbar">
             <div class="uc-seg" role="tablist" aria-label="How to view the datasets">
               <button role="tab" data-view="map" aria-selected="true">Map</button>
-              <button role="tab" data-view="time" aria-selected="false">Timeline</button>
+              <button role="tab" data-view="time" aria-selected="false">Project timeline</button>
+              <button role="tab" data-view="vardepth" aria-selected="false">Water column variables by depth</button>
               <button role="tab" data-view="none" aria-selected="false">Hide</button>
             </div>
             <span class="uc-spacer"></span>
             <span class="uc-sub" id="uc-vizhelp"></span>
-            <button class="uc-btn-sm" id="uc-draw" type="button">▭ Draw filter box</button><button class="uc-clearbtn" id="uc-clearbox" type="button" hidden>✕ Clear map box</button><button class="uc-clearbtn" id="uc-cleartime" type="button" hidden>✕ Clear period</button>
+            <span class="uc-sub" id="uc-bylabel" hidden>Split by</span><div class="uc-seg" id="uc-by" role="group" aria-label="Split the chart by" hidden><button data-by="project" aria-pressed="true">Project</button><button data-by="basin" aria-pressed="false">Ocean basin</button></div>
+            <button class="uc-btn-sm" id="uc-draw" type="button">▭ Draw filter box</button><button class="uc-clearbtn" id="uc-clearbox" type="button" hidden>✕ Clear map box</button><button class="uc-clearbtn" id="uc-cleartime" type="button" hidden>✕ Clear period</button><button class="uc-clearbtn" id="uc-cleardepth" type="button" hidden>✕ Clear depth range</button>
           </div>
           <div id="uc-map" role="img" aria-label="Map of measurement locations"></div>
           <div id="uc-chart"></div>
@@ -296,7 +298,7 @@
        State
        ===================================================================== */
     const fresh = () => ({ q: '', projects: new Set(), vars: new Set(), mode: 'all', from: '', to: '',
-      s: '', n: '', w: '', e: '', dmin: '', dmax: '', sort: 'match', tab: 'projects', view: 'map' });
+      s: '', n: '', w: '', e: '', dmin: '', dmax: '', sort: 'match', tab: 'projects', view: 'map', by: 'project' });
     const state = fresh();
     let projects = [], datasets = [], varInfo = new Map(), meta = {}, years = [0, 0];
     let tAxis = { idx0: 0, n: 1 }, depthMax = 100, lastRes = null, varFilter = '';
@@ -315,7 +317,8 @@
       ['s', 'n', 'w', 'e', 'dmin', 'dmax'].forEach(k => { state[k] = p.get(k) || ''; });
       state.sort = ['match', 'new', 'old', 'length', 'fine', 'title'].includes(p.get('sort')) ? p.get('sort') : 'match';
       state.tab = p.get('tab') === 'datasets' ? 'datasets' : 'projects';
-      state.view = ['map', 'time', 'none'].includes(p.get('view')) ? p.get('view') : defaultView();
+      state.view = ['map', 'time', 'vardepth', 'none'].includes(p.get('view')) ? p.get('view') : defaultView();
+      state.by = p.get('by') === 'basin' ? 'basin' : 'project';
     }
     function writeUrl() {
       const p = new URLSearchParams();
@@ -327,6 +330,7 @@
       if (state.sort !== 'match') p.set('sort', state.sort);
       if (state.tab !== 'projects') p.set('tab', state.tab);
       if (state.view !== defaultView()) p.set('view', state.view);
+      if (state.by !== 'project') p.set('by', state.by);
       const qs = p.toString();
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
     }
@@ -415,6 +419,19 @@
       return out;
     }
 
+    // Coarse ocean basin from a position (used to group datasets without any extra sheet columns)
+    const BASIN_ORDER = ['North Atlantic', 'South Atlantic', 'North Pacific', 'South Pacific', 'Indian Ocean', 'Arctic Ocean', 'Southern Ocean', 'Other'];
+    function basinOf(lat, lon) {
+      if (lat == null || lon == null) return 'Other';
+      if (lat <= -60) return 'Southern Ocean';
+      if (lat >= 66) return 'Arctic Ocean';
+      const ns = lat >= 0 ? 'North' : 'South';
+      if (lon >= 20 && lon < 100) return lat < 30 ? 'Indian Ocean' : 'Other';
+      if (lon >= 100 && lon < 147 && lat < -10) return 'Indian Ocean';
+      if ((lon >= -70 && lon < 20) || (lon >= -100 && lon < -70 && lat >= 8)) return `${ns} Atlantic`;
+      return `${ns} Pacific`;
+    }
+
     /* =====================================================================
        Data preparation
        ===================================================================== */
@@ -447,6 +464,8 @@
             dLevels: Array.isArray(dep.levels) ? dep.levels.filter(x => typeof x === 'number') : [],
             intSec: isoSeconds(d.granularity && d.granularity.temporal_resolution_iso)
           };
+          const loc = d.location || {}, clat = loc.latitude != null ? loc.latitude : (bb ? (bb.lat_min + bb.lat_max) / 2 : null), clon = loc.longitude != null ? loc.longitude : (bb ? (bb.lon_min + bb.lon_max) / 2 : null);
+          rec.basin = basinOf(clat, clon);
           rec.groups = uniq(vkeys.map(k => varInfo.get(k).group));
           rec._vars = uniq(vkeys.flatMap(k => { const v = varInfo.get(k); return [v.label, ...v.names, ...v.codes]; }));
           datasets.push(rec); proj.datasets.push(rec);
@@ -773,9 +792,9 @@
       ov.addEventListener('pointermove', e => {
         const p = svgPoint(svg, e);
         if (start !== null) { if (Math.abs(coord(e) - start) > 4) { dragged = true; draw(start, coord(e)); } return; }
-        const hit = cfg.at(p), hv = $('#uc-hover'); hv.hidden = !hit; hv.innerHTML = hit ? (cfg.hoverFn || hoverHtml)(hit) : '';
+        const hit = cfg.at(p), hv = $('#uc-hover'); hv.innerHTML = hit ? (cfg.hoverFn || hoverHtml)(hit) : '';
       });
-      ov.addEventListener('pointerleave', () => { if (start === null) $('#uc-hover').hidden = true; });
+      ov.addEventListener('pointerleave', () => { if (start === null) $('#uc-hover').innerHTML = ''; });
       const finish = e => {
         if (start === null) return;
         const s0 = start, s1 = coord(e); start = null;
@@ -786,41 +805,132 @@
     }
 
     function renderTimeline(res) {
-      const host = $('#uc-chart'), vis = res.base.filter(d => passes(d, state, 'time') && d.startMs != null);
+      const host = $('#uc-chart');
       const rows = projects.map(p => {
-        const ds = vis.filter(d => d.project.id === p.id);
+        const ds = res.list.filter(d => d.project.id === p.id && d.startMs != null);
         if (!ds.length) return null;
-        const r0 = p;
-        return { p, n: ds.length, startMs: Math.min(...ds.map(d => d.startMs)), endMs: r0.ongoing ? NOW : Math.max(...ds.map(d => d.endMs)), on: ds.some(d => passes(d, state)) };
+        return { p, n: ds.length, startMs: Math.min(...ds.map(d => d.startMs)), endMs: p.ongoing ? NOW : Math.max(...ds.map(d => d.endMs)) };
       }).filter(Boolean);
-      if (!rows.length) { host.innerHTML = '<p class="uc-mapnote">No projects to chart with the current filters.</p>'; return; }
-      const W = Math.max(host.clientWidth || 720, 520), LAB = 120, R = 14, TOP = 26, RH = 30;
-      const t0 = Date.UTC(years[0], 0, 1), t1 = Date.UTC(years[1] + 1, 0, 1), pw = W - LAB - R, H = TOP + rows.length * RH + 8;
+      const W = Math.max(host.clientWidth || 720, 520), LAB = 120, R = 14, TOP = 26, RH = 30, nr = Math.max(rows.length, 1), BOTAX = rows.length > 8 ? 18 : 0;
+      const t0 = Date.UTC(years[0], 0, 1), t1 = Date.UTC(years[1] + 1, 0, 1), pw = W - LAB - R, H = TOP + nr * RH + 8 + BOTAX;
       const x = ms => LAB + (ms - t0) / (t1 - t0) * pw, inv = px => t0 + (px - LAB) / pw * (t1 - t0);
       const every = (years[1] - years[0] + 1) * 34 > pw ? 2 : 1;
       let grid = '', body = '';
       for (let yr = years[0]; yr <= years[1] + 1; yr++) {
         const gx = x(Date.UTC(yr, 0, 1)).toFixed(1);
-        grid += `<line x1="${gx}" x2="${gx}" y1="${TOP - 4}" y2="${H - 4}" stroke="#e3e9ee"/>`;
-        if (yr <= years[1] && (yr - years[0]) % every === 0) grid += `<text x="${x(Date.UTC(yr, 6, 1)).toFixed(1)}" y="${TOP - 9}" text-anchor="middle">${yr}</text>`;
+        grid += `<line x1="${gx}" x2="${gx}" y1="${TOP - 4}" y2="${H - 4 - BOTAX}" stroke="#e3e9ee"/>`;
+        if (yr <= years[1] && (yr - years[0]) % every === 0) grid += `<text x="${x(Date.UTC(yr, 6, 1)).toFixed(1)}" y="${TOP - 9}" text-anchor="middle">${yr}</text>` + (BOTAX ? `<text x="${x(Date.UTC(yr, 6, 1)).toFixed(1)}" y="${H - 6}" text-anchor="middle">${yr}</text>` : '');
       }
       rows.forEach((r, i) => {
-        const y = TOP + i * RH, x0 = x(r.startMs), w = Math.max(4, x(r.endMs) - x0), op = r.on ? 1 : .25;
+        const y = TOP + i * RH, x0 = x(r.startMs), w = Math.max(4, x(r.endMs) - x0);
         const name = r.p.short.length > 28 ? r.p.short.slice(0, 27) + '…' : r.p.short;
-        body += `<text class="uc-ch-h" x="${LAB - 8}" y="${y + RH / 2 + 4}" text-anchor="end" opacity="${op < 1 ? .5 : 1}">${esc(name)}</text>`
-          + `<rect x="${x0.toFixed(1)}" y="${y + 6}" width="${w.toFixed(1)}" height="${RH - 12}" rx="3" fill="${r.p.color}" opacity="${op}"/>`;
+        body += `<text class="uc-ch-h" x="${LAB - 8}" y="${y + RH / 2 + 4}" text-anchor="end">${esc(name)}</text>`
+          + `<rect x="${x0.toFixed(1)}" y="${y + 6}" width="${w.toFixed(1)}" height="${RH - 12}" rx="1" fill="${r.p.color}"/>`;
       });
+      if (!rows.length) body = `<text x="${(LAB + pw / 2).toFixed(1)}" y="${TOP + RH / 2 + 4}" text-anchor="middle">No projects match the current filters.</text>`;
       const { f, t } = timeBounds(state);
-      const selR = (f != null || t != null) ? `<rect id="uc-sel" x="${x(f ?? t0).toFixed(1)}" y="${TOP - 4}" width="${Math.max(2, x(t ?? t1) - x(f ?? t0)).toFixed(1)}" height="${H - TOP}" fill="#0b6e8f" fill-opacity=".14" stroke="#0b6e8f"/>` : '';
-      host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Timeline of projects">${grid}${body}${selR}<rect id="uc-brush" x="${LAB}" y="${TOP - 4}" width="${pw}" height="${H - TOP}" fill="transparent" style="cursor:crosshair"/></svg>`;
+      const selR = (f != null || t != null) ? `<rect id="uc-sel" x="${x(f ?? t0).toFixed(1)}" y="${TOP - 4}" width="${Math.max(2, x(t ?? t1) - x(f ?? t0)).toFixed(1)}" height="${H - TOP - BOTAX}" fill="#0b6e8f" fill-opacity=".14" stroke="#0b6e8f"/>` : '';
+      host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Timeline of projects in the results">${grid}${body}${selR}<rect id="uc-brush" x="${LAB}" y="${TOP - 4}" width="${pw}" height="${H - TOP - BOTAX}" fill="transparent" style="cursor:crosshair"/></svg>`;
       attachBrush(host.querySelector('svg'), {
-        axis: 'x', a: LAB, b: LAB + pw, y0: TOP - 4, y1: H - 4,
+        axis: 'x', a: LAB, b: LAB + pw, y0: TOP - 4, y1: H - 4 - BOTAX,
         at: p => { const i = Math.floor((p.y - TOP) / RH); return i >= 0 && i < rows.length ? rows[i] : null; },
         hoverFn: r => `<strong>${esc(r.p.title)}</strong> · ${esc(periodText(r.startMs, r.endMs))} · ${r.n} dataset${r.n === 1 ? '' : 's'}${r.p.region ? ' · ' + esc(r.p.region) : ''}`,
         clear: () => { if (timeActive(state)) { state.from = state.to = ''; update(); } },
         commit: (a, b) => {
           const m0 = ym(inv(a)), m1 = ym(inv(b));
           state.from = ymToIdx(m0) <= 0 ? '' : m0; state.to = ymToIdx(m1) >= tAxis.n - 1 ? '' : m1; update();
+        }
+      });
+    }
+
+    // Variable groups (columns, same groups as the left-hand filter) against depth (rows), for the datasets in the results.
+    // Depths come from each file's DEPTH coordinate, so every variable in a file is shown at that file's depth levels.
+    // Up to PER_PROJECT_MAX projects: coloured ticks per project. More than that: one shaded strip per group (darker = more datasets).
+    const PER_PROJECT_MAX = 6, DEPTH_BINS = 40;
+    function renderVarDepth(res) {
+      const host = $('#uc-chart'), list = res.list;
+      const SURFACE = ['Wind', 'Precipitation', 'Humidity & pressure', 'Radiation & heat flux', 'Air temperature'];   // surface-only measurements are left out of this view
+      const gs = GROUP_ORDER.filter(g => !SURFACE.includes(g) && list.some(d => d.groups.includes(g)));
+      const byBasin = state.by === 'basin';
+      const ents = byBasin ? BASIN_ORDER.filter(b => list.some(d => d.basin === b)).map((b, i) => ({ id: b, label: b, color: PALETTE[BASIN_ORDER.indexOf(b) % PALETTE.length] }))
+        : projects.filter(p => list.some(d => d.project.id === p.id)).map(p => ({ id: p.id, label: p.short, color: p.color }));
+      const inEnt = (d, e) => (byBasin ? d.basin === e.id : d.project.id === e.id);
+      const np = Math.max(ents.length, 1), agg = ents.length > (byBasin ? 8 : PER_PROJECT_MAX);
+      const L = 58, R = 16, TOP = 40, PH = 320, BOT = 58;
+      const W = Math.max(host.clientWidth || 720, L + R + Math.max(gs.length, 1) * (agg ? 120 : 20 + np * 16)), pw = W - L - R, slot = pw / Math.max(gs.length, 1), H = TOP + PH + BOT;
+      const y = d => TOP + depthFrac(d) * PH, inv = py => depthVal(clamp((py - TOP) / PH, 0, 1));
+      let grid = '', body = '';
+      depthTicks().forEach(([f, lab]) => { const gy = (TOP + f * PH).toFixed(1); grid += `<line x1="${L}" x2="${W - R}" y1="${gy}" y2="${gy}" stroke="#e3e9ee"/><text x="${L - 6}" y="${(+gy + 4).toFixed(1)}" text-anchor="end">${esc(lab)}</text>`; });
+      const lines = t => { const out = []; let cur = ''; t.split(' ').forEach(w => { if ((cur + ' ' + w).trim().length > 15 && cur) { out.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); }); out.push(cur); return out; };
+      // which depth bins does a dataset sample?
+      const binOf = f => clamp(Math.floor(f * DEPTH_BINS), 0, DEPTH_BINS - 1);
+      const binsOf = d => {
+        const out = new Set();
+        if (d.dLevels.length) d.dLevels.forEach(l => out.add(binOf(depthFrac(l))));
+        else if (d.dMin != null) for (let b = binOf(depthFrac(d.dMin)); b <= binOf(depthFrac(d.dMax)); b++) out.add(b);
+        return out;
+      };
+      let maxC = 1;
+      const cols = gs.map(g => {
+        const items = list.filter(d => d.groups.includes(g)), bins = Array.from({ length: DEPTH_BINS }, () => []);
+        if (agg) { items.forEach(d => binsOf(d).forEach(b => bins[b].push(d))); maxC = Math.max(maxC, ...bins.map(b => b.length)); }
+        return { g, items, bins };
+      });
+      // legend
+      if (agg) {
+        body += `<defs><linearGradient id="uc-lg"><stop offset="0" stop-color="#d6e8f0"/><stop offset="1" stop-color="#0b4f68"/></linearGradient></defs>`
+          + `<text x="${L}" y="18">Fewer datasets</text><rect x="${L + 84}" y="9" width="90" height="10" fill="url(#uc-lg)"/><text x="${L + 180}" y="18">More datasets (up to ${maxC}) · ${ents.length} ${byBasin ? 'basins' : 'projects'}.${byBasin ? '' : ` Narrow to ${PER_PROJECT_MAX} or fewer projects to see each one, or split by ocean basin.`}</text>`;
+      } else {
+        let lx = L; ents.forEach(e => { body += `<circle cx="${lx + 5}" cy="14" r="5" fill="${e.color}"/><text x="${lx + 14}" y="18">${esc(e.label)}</text>`; lx += 30 + e.label.length * 6.6; });
+      }
+      const shade = c => { const t = c / maxC, a = [214, 232, 240], b = [11, 79, 104]; return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * t)).join(',')})`; };
+      cols.forEach((col, i) => {
+        const cx0 = L + slot * i, g = col.g, items = col.items;
+        if (i > 0) grid += `<line x1="${cx0.toFixed(1)}" x2="${cx0.toFixed(1)}" y1="${TOP - 4}" y2="${TOP + PH}" stroke="#e3e9ee"/>`;
+        if (agg) {
+          col.bins.forEach((ds, b) => {
+            if (!ds.length) return;
+            body += `<rect x="${(cx0 + slot * .2).toFixed(1)}" y="${(TOP + b / DEPTH_BINS * PH).toFixed(1)}" width="${(slot * .6).toFixed(1)}" height="${(PH / DEPTH_BINS + .6).toFixed(1)}" fill="${shade(ds.length)}"/>`;
+          });
+        } else {
+          ents.forEach((p, pi) => {
+            const px = cx0 + slot * (pi + .5) / np, mine = items.filter(d => inEnt(d, p));
+            if (!mine.length) return;
+            const lv = uniq(mine.flatMap(d => (d.dLevels.length ? d.dLevels : [d.dMin, d.dMax]).filter(v => v != null))).sort((a, b) => a - b);
+            if (lv.length > 1) body += `<line x1="${px.toFixed(1)}" x2="${px.toFixed(1)}" y1="${y(lv[0]).toFixed(1)}" y2="${y(lv[lv.length - 1]).toFixed(1)}" stroke="${p.color}" stroke-opacity=".3" stroke-width="4" stroke-linecap="round"/>`;
+            const hw = Math.min(9, slot / np / 2 - 2);
+            lv.forEach(l => { body += `<line x1="${(px - hw).toFixed(1)}" x2="${(px + hw).toFixed(1)}" y1="${y(l).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${p.color}" stroke-width="2"/>`; });
+          });
+        }
+        const ls = lines(g);
+        body += `<text class="uc-ch-h" text-anchor="middle" x="${(cx0 + slot / 2).toFixed(1)}" y="${TOP + PH + 18}">${ls.map((t, n) => `<tspan x="${(cx0 + slot / 2).toFixed(1)}" dy="${n ? 14 : 0}">${esc(t)}</tspan>`).join('')}</text>`;
+      });
+      if (!gs.length) body += `<text x="${(L + pw / 2).toFixed(1)}" y="${TOP + 40}" text-anchor="middle">${list.length ? 'None of the datasets in the results have water-column variables.' : 'No datasets match the current filters.'}</text>`;
+      const lo = isNum(state.dmin) ? +state.dmin : 0, hi = isNum(state.dmax) ? +state.dmax : depthMax;
+      const selR = depthActive(state) ? `<rect id="uc-sel" x="${L}" y="${y(lo).toFixed(1)}" width="${pw}" height="${Math.max(2, y(hi) - y(lo)).toFixed(1)}" fill="#0b6e8f" fill-opacity=".14" stroke="#0b6e8f"/>` : '';
+      host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Depths at which each group of variables is measured, for the datasets in the results">${grid}${body}${selR}<rect id="uc-brush" x="${L}" y="${TOP}" width="${pw}" height="${PH}" fill="transparent" style="cursor:crosshair"/></svg>`;
+      attachBrush(host.querySelector('svg'), {
+        axis: 'y', a: TOP, b: TOP + PH, x0: L, x1: W - R,
+        at: p => {
+          const i = Math.floor((p.x - L) / slot); if (i < 0 || i >= cols.length) return null;
+          if (!agg) return cols[i];
+          const b = clamp(Math.floor((p.y - TOP) / PH * DEPTH_BINS), 0, DEPTH_BINS - 1), ds = cols[i].bins[b];
+          return ds.length ? { g: cols[i].g, items: ds, bin: b } : null;
+        },
+        hoverFn: c => {
+          const vs = uniq(c.items.flatMap(d => d.vkeys.filter(k => varInfo.get(k).group === c.g))).map(k => varInfo.get(k).label);
+          const pn = uniq(c.items.map(d => d.project.short)), pshow = pn.length > 5 ? pn.slice(0, 5).join(', ') + ` +${pn.length - 5} more` : pn.join(', ');
+          if (c.bin != null) {
+            const a = depthVal(c.bin / DEPTH_BINS), b = depthVal((c.bin + 1) / DEPTH_BINS);
+            return `<strong>${esc(c.g)}</strong> at ${n1(a)}–${n1(b)} m · ${c.items.length} dataset${c.items.length === 1 ? '' : 's'} in ${pn.length} project${pn.length === 1 ? '' : 's'}: ${esc(pshow)}`;
+          }
+          const mins = c.items.map(d => d.dMin).filter(n => n != null), maxs = c.items.map(d => d.dMax).filter(n => n != null);
+          return `<strong>${esc(c.g)}</strong> · ${esc(vs.join(', '))} · ${c.items.length} dataset${c.items.length === 1 ? '' : 's'} · ${esc(pshow)} · depth ${mins.length ? esc(depthText({ min: Math.min(...mins), max: Math.max(...maxs) })) : '—'}`;
+        },
+        clear: () => { if (depthActive(state)) { state.dmin = state.dmax = ''; update(); } },
+        commit: (a, b) => {
+          const lo2 = Math.round(inv(a) * 2) / 2, hi2 = Math.round(inv(b) * 2) / 2;
+          state.dmin = lo2 <= 0 ? '' : String(lo2); state.dmax = hi2 >= depthMax ? '' : String(hi2); update();
         }
       });
     }
@@ -877,13 +987,18 @@
       const v = state.view;
       if (v !== 'map' && boxMode) endBoxMode();
       root.querySelectorAll('.uc-seg button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
-      $('#uc-map').hidden = v !== 'map'; $('#uc-chart').hidden = v !== 'time';
-      $('#uc-hover').hidden = true; $('#uc-draw').hidden = v !== 'map'; $('#uc-clearbox').hidden = v !== 'map' || !areaActive(state);
+      $('#uc-map').hidden = v !== 'map'; $('#uc-chart').hidden = v !== 'time' && v !== 'vardepth';
+      $('#uc-hover').hidden = v !== 'time' && v !== 'vardepth'; $('#uc-hover').innerHTML = ''; $('#uc-draw').hidden = v !== 'map'; $('#uc-clearbox').hidden = v !== 'map' || !areaActive(state);
       $('#uc-cleartime').hidden = v !== 'time' || !timeActive(state);
+      $('#uc-cleardepth').hidden = v !== 'vardepth' || !depthActive(state);
+      $('#uc-cleardepth').textContent = `✕ Clear depth range (${state.dmin || 0}–${state.dmax || depthMax} m)`;
       $('#uc-cleartime').textContent = `✕ Clear period (${ymLabel(state.from) || 'start'} – ${ymLabel(state.to) || 'end'})`;
       $('#uc-vizhelp').textContent = '';
+      $('#uc-by').hidden = $('#uc-bylabel').hidden = v !== 'vardepth';
+      root.querySelectorAll('#uc-by button').forEach(b => { const on = b.dataset.by === state.by; b.setAttribute('aria-pressed', String(on)); b.setAttribute('aria-selected', String(on)); });
       if (v === 'map') renderMap(res.list);
       else if (v === 'time') renderTimeline(res);
+      else if (v === 'vardepth') renderVarDepth(res);
     }
 
     /* =====================================================================
@@ -945,6 +1060,7 @@
       $('#uc-draw').addEventListener('click', () => { boxMode ? endBoxMode() : startBoxMode(); });
       $('#uc-clearbox').addEventListener('click', () => { clearKind(state, 'area'); update(); });
       $('#uc-cleartime').addEventListener('click', () => { clearKind(state, 'time'); update(); });
+      $('#uc-cleardepth').addEventListener('click', () => { clearKind(state, 'depth'); update(); });
       $('#uc-reset-top').addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); if (e.currentTarget.getAttribute('aria-disabled') === 'true') return; const q = state.q; clearAll(); state.q = q; $('#uc-q').value = q; update(); });
       root.addEventListener('change', e => {
         const f = e.target.dataset && e.target.dataset.facet; if (!f) return;
@@ -952,11 +1068,12 @@
       });
       root.addEventListener('toggle', e => { const g = e.target.dataset && e.target.dataset.g; if (g) (e.target.open ? openGroups.add(g) : openGroups.delete(g)); }, true);
       root.addEventListener('click', e => {
-        const el = e.target.closest('[data-tab],[data-view],[data-project],[data-var],[data-remove],[data-clearall],[data-viewproject],[data-clamp],[data-relax],[data-replace]');
+        const el = e.target.closest('[data-tab],[data-view],[data-project],[data-var],[data-remove],[data-clearall],[data-viewproject],[data-clamp],[data-relax],[data-replace],[data-by]');
         if (!el) return;
         const d = el.dataset;
         if (d.tab) { state.tab = d.tab; update(); }
         else if (d.view) { state.view = d.view; update(); }
+        else if (d.by) { state.by = d.by; update(); }
         else if (d.viewproject) { state.projects = new Set([d.viewproject]); state.tab = 'datasets'; update(); $('.uc-toolbar').scrollIntoView({ block: 'start' }); }
         else if (d.project) { state.projects = new Set([d.project]); update(); }
         else if (d.var) { toggle(state.vars, d.var); update(); }
@@ -970,7 +1087,7 @@
           update();
         }
       });
-      window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (lastRes && state.view === 'time') renderViz(lastRes); }, 150); });
+      window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (lastRes && (state.view === 'time' || state.view === 'vardepth')) renderViz(lastRes); }, 150); });
       const mq = matchMedia('(max-width: 900px)'), sync = () => { $('#uc-filters').open = !mq.matches; };
       mq.addEventListener('change', sync); sync();
     }
